@@ -6,7 +6,7 @@ import { Carousel } from '../ui/carusel/carousel';
 import './page.css'
 
 const Page = ({ params }: { params: { servises: string } }) => {
-    const pathname = usePathname();
+    const PAGE_WIDTH_NUM = 450
 
     const { page } = usePageObj(params.servises);
     console.log(page?.firstDivContent);
@@ -24,7 +24,7 @@ const Page = ({ params }: { params: { servises: string } }) => {
 
                     <div className='flex justify-center'>
 
-                        <Carousel>
+                        <Carousel >
                             <div className="item item-1">Item 1</div>
                             <div className="item item-2">Item 2</div>
                             <div className="item item-3">Item 3</div>

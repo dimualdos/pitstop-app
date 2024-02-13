@@ -1,33 +1,48 @@
-import { useEffect, useState, Children, cloneElement } from 'react';
+import { useEffect, useState, Children, cloneElement, ReactElement, JSXElementConstructor } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 
-const PAGE_WIDTH = 450
 
-export const Carousel = ({ children }: any) => {
-    const [pages, setPages] = useState([])
-    const [offset, setOffset] = useState(0)
+const PAGE_WIDTH = 450;
+
+export const Carousel = ({ children }: any,) => {
+    const [pages, setPages] = useState([]);
+    const [offset, setOffset] = useState(0);
 
     const handleLeftArrowClick = () => {
         setOffset((currentOffset) => {
-            const newOffset = currentOffset + PAGE_WIDTH
-            console.log(newOffset)
-            console.log(Math.min(newOffset, 0))
-
-            return Math.min(newOffset, 0)
+            const newOffset = currentOffset + PAGE_WIDTH;
+            // если надо просто остановить карусель и не двигаться дальше
+            // то можно использовать (расскоментированный) код ниже,
+            // удалить if else и заретюрнить математическую формулу.
+            // return Math.min(newOffset, 0)
+            if (newOffset === PAGE_WIDTH) {
+                return -(PAGE_WIDTH * (pages.length - 1))
+            } else {
+                return newOffset
+            }
         })
-    }
+    };
+
     const handleRightArrowClick = () => {
         setOffset((currentOffset) => {
+            //currentOffset - это предыдущее сосотяние
             const newOffset = currentOffset - PAGE_WIDTH;
+            // если надо просто остановить карусель и не двигаться дальше
+            // то можно использовать (расскоментированный) код ниже,
+            // удалить if else и заретюрнить математическую формулу.
 
-            const maxOffset = -(PAGE_WIDTH * (pages.length - 1));
+            // const maxOffset = -(PAGE_WIDTH * (pages.length - 1));
+            // Math.max(newOffset, maxOffset)
 
-
-            console.log(newOffset, maxOffset)
-            return Math.max(newOffset, maxOffset)
+            if (newOffset === -(PAGE_WIDTH * (pages.length))) {
+                return 0
+            } else {
+                return newOffset
+            }
         })
-    }
+    };
+
 
     useEffect(() => {
         setPages(
@@ -41,7 +56,7 @@ export const Carousel = ({ children }: any) => {
                 })
             })
         )
-    }, [children])
+    }, [PAGE_WIDTH, children]);
 
     return (
         <div className="flex flex-row items-center w-[450px] h-[150px]">
