@@ -22,7 +22,7 @@ export default function NavLinks() {
               'hover:bg-sky-200 hover:text-[#AE4A84] bg-gray-200 text-blue-600',
               {
                 'bg-[#bae6fd]  text-[#ae4a84]': pathname === link.href,
-                ' dark:bg-gray-900 dark:text-[#AE4A84]': pathname === link.href,
+                ' dark:bg-gray-900 dark:text-[#ae4a84]': pathname === link.href,
               },
             )}
           >

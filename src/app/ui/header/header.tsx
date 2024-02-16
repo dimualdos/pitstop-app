@@ -52,7 +52,7 @@ export default function Header() {
                             'dark:bg-[#142030] dark:text-stone-300  hover:text-[#AE4A84] hover:bg-[#bee5fa] bg-gray-300 text-blue-600  px-2 py-1 rounded-md ',
                             {
                                 'bg-[#bee5fa] text-[#a3457c]': pathname === '/contacts',
-                                'dark:text-[#AE4A84]': pathname === '/contacts'
+                                'dark:text-[#ae4a84]': pathname === '/contacts'
                             },
                         )} >
                             <p>Контакты</p>

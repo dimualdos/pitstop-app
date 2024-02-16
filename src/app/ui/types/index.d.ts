@@ -14,4 +14,11 @@ export interface IPages {
   ulFirstDiv: string;
   liFirstDiv: string[];
   firstDivContent: string;
+  imagesArray: {
+    src: any;
+    alt: string;
+    title: string;
+    width: number;
+    height: number;
+  }[];
 }

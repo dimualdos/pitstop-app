@@ -1,4 +1,5 @@
-
+import bamperRepairPorsh from '../../../../public/Ремонт-бампера/Porshe-bumper-repair/Porshe-bumper-repair.jpg'
+import bamperRepairPorsh1 from '../../../../public/Ремонт-бампера/Porshe-bumper-repair/Porshe-bumper-repair1.jpg'
 
 
 export const pagesArr = [
@@ -28,6 +29,7 @@ export const pagesArr = [
                    то целесообразнее купить не поврежденную деталь новую или б/у.
                    Тогда можно будет гарантировать качество работ.
                    В любом случае во время осмотра мастер скажет как лучше поступить в данном случае и чтоб меньше всего было денежных атрат.`,
+        imagesArray: [bamperRepairPorsh, bamperRepairPorsh1]
     },
     {
         title: 'Замена бампера авто',
@@ -54,5 +56,7 @@ export const pagesArr = [
                    Мы его оперативно установим вместо старого. Если же у Вас есть новый бампер или бампер, который требуется красить, то заказав покраску у нас, Вы получите качественную услугу. 
                    Установив бампер на место, мы выставим зазоры (если бампер не китайский и нет нарушения геометрии сопряженных деталей).
                    Мы можем провести предварительную консультацию по WhatsApp 8(985) 280-34-34`,
+        imagesArray: [bamperRepairPorsh, bamperRepairPorsh1]
+
     }
 ]

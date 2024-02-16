@@ -1,19 +1,33 @@
 'use client'
-
-import { usePathname } from 'next/navigation';
-import usePageObj from './use-page';
-import { Carousel } from '../ui/carusel/carousel';
-import './page.css'
+import Image from 'next/image';
+import usePageObj from '../ui/services/hooks/use-page';
+import { Carousel } from '../ui/slick-sliger/carousel';
+import { useEffect, useState } from 'react';
 
 const Page = ({ params }: { params: { servises: string } }) => {
-    const PAGE_WIDTH_NUM = 450
-
+    const [images, setImages] = useState<string[]>([]);
     const { page } = usePageObj(params.servises);
-    console.log(page?.firstDivContent);
+
+    const WIDTH_SLIDE = 450;
+    console.log(params.servises);
+    console.log(page?.imagesArray);
+
+
+
+    // useEffect(() => {
+    //     if (!page) return;
+    //     const imagesPage = page!.imagesArray.map((item, index) => {
+    //         <div className="flex items-center justify-center h-[100%] w-[100%] item-1" bg-slate-800 >
+    //             <Image src={`${item}`} alt={`${item}`} />
+    //         </div>
+    //     });
+    //     setImages(imagesPage);
+    //     console.log(images)
+    // }, [images, page])
 
     return (
         <>
-            {page && (
+            {page && page.imagesArray && (
                 <div className='flex   gap-4 flex-col'>
                     <div className='text-center'>
                         <h1 className='text-xl'>
@@ -23,13 +37,17 @@ const Page = ({ params }: { params: { servises: string } }) => {
                     </div>
 
                     <div className='flex justify-center'>
+                        <Carousel PAGE_WIDTH={WIDTH_SLIDE}>
+                            {page.imagesArray && page?.imagesArray.map((item, index) => {
 
-                        <Carousel >
-                            <div className="item item-1">Item 1</div>
-                            <div className="item item-2">Item 2</div>
-                            <div className="item item-3">Item 3</div>
+
+                                console.log(item);
+                                return (<div key={index} className="flex items-center justify-center h-[100%] w-[100%]" >
+                                    <Image priority={false} src={item} alt={page?.H1} />
+
+                                </div>)
+                            })}
                         </Carousel>
-
                     </div>
 
                     <div className='text-left hyphens-auto'>{page?.firstDivContent}</div>
@@ -40,3 +58,25 @@ const Page = ({ params }: { params: { servises: string } }) => {
 
 }
 export default Page;
+
+function SampleNextArrow(props: { className?: any; style?: any; onClick?: any; }) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{ ...style, display: "block", background: "red" }}
+            onClick={onClick}
+        />
+    );
+}
+
+function SamplePrevArrow(props: { className?: any; style?: any; onClick?: any; }) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{ ...style, display: "block", background: "green" }}
+            onClick={onClick}
+        />
+    );
+}
