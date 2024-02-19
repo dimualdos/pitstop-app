@@ -1,68 +1,44 @@
 import { useEffect, useState, Children, cloneElement, ReactElement, JSXElementConstructor } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import Image from 'next/image';
 
 
 
 // const PAGE_WIDTH = 450;
 
-export const Carousel = ({ children, PAGE_WIDTH }: any,) => {
-    const [pages, setPages] = useState([]);
-    const [offset, setOffset] = useState(0);
-    const [rowWidth, setRowWidth] = useState('');
-    const [widthDiv, setWidthDiv] = useState('')
+export const Carousel = ({ page, PAGE_WIDTH, pageAlt }: any) => {
+    const [widthDiv, setWidthDiv] = useState('');
+    const [slide, setSlide] = useState(0);
+    const [slidePage, setSlidePage] = useState();
 
     const handleLeftArrowClick = () => {
-        setOffset((currentOffset) => {
-            const newOffset = currentOffset + PAGE_WIDTH;
-            // если надо просто остановить карусель и не двигаться дальше
-            // то можно использовать (расскоментированный) код ниже,
-            // удалить if else и заретюрнить математическую формулу.
-            // return Math.min(newOffset, 0)
-            if (newOffset === PAGE_WIDTH) {
-                return -(PAGE_WIDTH * (pages.length - 1))
-            } else {
-                return newOffset
-            }
-        })
+        if (slide <= 0) {
+            setSlide(page.length - 1)
+        } else {
+            setSlide(slide - 1)
+        }
     };
-    console.log(children)
+
     const handleRightArrowClick = () => {
-        setOffset((currentOffset) => {
-            //currentOffset - это предыдущее сосотяние
-            const newOffset = currentOffset - PAGE_WIDTH;
-            // если надо просто остановить карусель и не двигаться дальше
-            // то можно использовать (расскоментированный) код ниже,
-            // удалить if else и заретюрнить математическую формулу.
-
-            // const maxOffset = -(PAGE_WIDTH * (pages.length - 1));
-            // Math.max(newOffset, maxOffset)
-
-            if (newOffset === -(PAGE_WIDTH * (pages.length))) {
-                return 0
-            } else {
-                return newOffset
-            }
-        })
+        if (slide >= page.length - 1) {
+            setSlide(0)
+        } else {
+            setSlide(slide + 1)
+        }
     };
-    useEffect(() => {
-        // console.log(children.length)
-        if (!children.length || children[0] === undefined) return;
 
-        setRowWidth(`${PAGE_WIDTH * children.length}px`);
+    useEffect(() => {
+        let w: Element | null = document.querySelector('#parent-img')
+        // console.log(w?.clientWidth);
+
+        if (!page) return;
         setWidthDiv(`${PAGE_WIDTH}px`);
-        // console.log(children)
-        setPages(
-            Children.map(children, (child) => {
-                return cloneElement(child, {
-                    style: {
-                        width: '100%',
-                        maxWidth: `${PAGE_WIDTH}px`,
-                        objectFit: 'cover',
-                    },
-                })
-            })
-        )
-    }, [PAGE_WIDTH, children]);
+
+        setSlidePage(
+            page!.find((child: any, i: number) => i === slide)
+        );
+
+    }, [PAGE_WIDTH, slide, page, slidePage]);
 
     return (
         <div className={`flex  items-center h-[100%] `} style={{ width: `${widthDiv}` }}>
@@ -70,11 +46,8 @@ export const Carousel = ({ children, PAGE_WIDTH }: any,) => {
             <div className={`h-[100%]   overflow-hidden w-[100%]`} >
                 <div
                     className="h-[100%] flex  "
-                    style={{
-                        transform: `translateX(${offset}px)`,
-                    }}
                 >
-                    {pages}
+                    {slidePage && <Image priority={true} src={slidePage} alt={pageAlt} />}
                 </div>
             </div>
             <FaChevronRight className="cursor-pointer" onClick={handleRightArrowClick} />

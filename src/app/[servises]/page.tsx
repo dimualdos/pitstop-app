@@ -2,9 +2,9 @@
 import Image from 'next/image';
 import usePageObj from '../ui/services/hooks/use-page';
 import { Carousel } from '../ui/slick-sliger/carousel';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import SlickSlider from '../ui/slick-sliger/slick-slider';
-import ControlledCarousel from '../ui/bootstrap-slider/bootstrap-slider';
+
+
+
 
 const Page = ({ params }: { params: { servises: string } }) => {
     // const [width, setWidth] = useState<number>(0);
@@ -35,22 +35,10 @@ const Page = ({ params }: { params: { servises: string } }) => {
                         </h1>
                         <h2>{page?.H2}</h2>
                     </div>
-                    {/* <div className='relative w-[100%] sm:w-[calc(100%-280px)]'>
-                        <SlickSlider nameAlt={page?.H1} arrayImages={page.imagesArray} />
-                    </div> */}
-                    {/* <ControlledCarousel nameAlt={page?.H1} arrayImages={page.imagesArray} /> */}
+                    <div id='parent-img' className='flex flex-row justify-center '>
 
+                        <Carousel PAGE_WIDTH={WIDTH_SLIDE} page={page?.imagesArray} pageAlt={page?.H1} />
 
-
-                    <div className='flex flex-row justify-center '>
-
-                        <Carousel PAGE_WIDTH={WIDTH_SLIDE}>
-                            {page.imagesArray && page?.imagesArray.map((item, index) => {
-                                // console.log(item);
-                                return (<Image key={index} priority={true} src={item} alt={page?.H1} />
-                                )
-                            })}
-                        </Carousel>
                     </div>
                     <div className=' text-left hyphens-auto'>{page?.firstDivContent}</div>
                 </div>
