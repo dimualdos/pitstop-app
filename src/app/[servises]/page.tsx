@@ -2,55 +2,57 @@
 import Image from 'next/image';
 import usePageObj from '../ui/services/hooks/use-page';
 import { Carousel } from '../ui/slick-sliger/carousel';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import SlickSlider from '../ui/slick-sliger/slick-slider';
+import ControlledCarousel from '../ui/bootstrap-slider/bootstrap-slider';
 
 const Page = ({ params }: { params: { servises: string } }) => {
-    const [images, setImages] = useState<string[]>([]);
+    // const [width, setWidth] = useState<number>(0);
     const { page } = usePageObj(params.servises);
+    // const [imageWidth, setImageWidth] = useState<number>(0);
+    // const elementRef = useRef(0);
 
-    const WIDTH_SLIDE = 450;
-    console.log(params.servises);
-    console.log(page?.imagesArray);
-
-
-
+    const WIDTH_SLIDE = 650;
+    // console.log(params.servises);
+    // console.log(page?.imagesArray);
     // useEffect(() => {
-    //     if (!page) return;
-    //     const imagesPage = page!.imagesArray.map((item, index) => {
-    //         <div className="flex items-center justify-center h-[100%] w-[100%] item-1" bg-slate-800 >
-    //             <Image src={`${item}`} alt={`${item}`} />
-    //         </div>
-    //     });
-    //     setImages(imagesPage);
-    //     console.log(images)
-    // }, [images, page])
+    //     setWidth(elementRef.current = document.body.clientWidth);
+
+    //     let numberWidth = width < 640 ? 450 : WIDTH_SLIDE;
+    //     setImageWidth(numberWidth)
+    //     console.log(elementRef.current = document.body.clientWidth)
+
+
+    // }, [width, elementRef])
 
     return (
         <>
             {page && page.imagesArray && (
-                <div className='flex   gap-4 flex-col'>
-                    <div className='text-center'>
+                <div className='flex  gap-4 flex-col pl-2 pr-2'>
+                    <div className=' text-center'>
                         <h1 className='text-xl'>
                             {page?.H1}
                         </h1>
                         <h2>{page?.H2}</h2>
                     </div>
+                    {/* <div className='relative w-[100%] sm:w-[calc(100%-280px)]'>
+                        <SlickSlider nameAlt={page?.H1} arrayImages={page.imagesArray} />
+                    </div> */}
+                    {/* <ControlledCarousel nameAlt={page?.H1} arrayImages={page.imagesArray} /> */}
 
-                    <div className='flex justify-center'>
+
+
+                    <div className='flex flex-row justify-center '>
+
                         <Carousel PAGE_WIDTH={WIDTH_SLIDE}>
                             {page.imagesArray && page?.imagesArray.map((item, index) => {
-
-
-                                console.log(item);
-                                return (<div key={index} className="flex items-center justify-center h-[100%] w-[100%]" >
-                                    <Image priority={false} src={item} alt={page?.H1} />
-
-                                </div>)
+                                // console.log(item);
+                                return (<Image key={index} priority={true} src={item} alt={page?.H1} />
+                                )
                             })}
                         </Carousel>
                     </div>
-
-                    <div className='text-left hyphens-auto'>{page?.firstDivContent}</div>
+                    <div className=' text-left hyphens-auto'>{page?.firstDivContent}</div>
                 </div>
             )}
         </ >
@@ -59,24 +61,24 @@ const Page = ({ params }: { params: { servises: string } }) => {
 }
 export default Page;
 
-function SampleNextArrow(props: { className?: any; style?: any; onClick?: any; }) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "red" }}
-            onClick={onClick}
-        />
-    );
-}
-
-function SamplePrevArrow(props: { className?: any; style?: any; onClick?: any; }) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "green" }}
-            onClick={onClick}
-        />
-    );
-}
+//<Image width={WIDTH_SLIDE} height={WIDTH_SLIDE} className='object-cover' priority={true}
+// layout='responsive'
+// objectFit='contain'
+// objectPosition='center'
+// sizes='(max-width: 768px) 100vw,
+// (max-width: 1200px) 50vw,
+// 33vw'
+// src={item}
+// alt={page?.H1}
+// width={imageWidth}
+// height={imageWidth}
+// placeholder='blur'
+// blurDataURL={item}
+// quality={100}
+// priority={true}
+// loading='eager'
+// unoptimized={true}
+// loader={({ src, width, quality }) => {
+//     return `${src}?w=${width}&q=${quality || 75}`
+// }}
+// onLoadingComplete={() => {priority={true} src={item} alt={page?.H1} /

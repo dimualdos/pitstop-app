@@ -8,6 +8,9 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 export const Carousel = ({ children, PAGE_WIDTH }: any,) => {
     const [pages, setPages] = useState([]);
     const [offset, setOffset] = useState(0);
+    const [rowWidth, setRowWidth] = useState('');
+    const [widthDiv, setWidthDiv] = useState('')
+
     const handleLeftArrowClick = () => {
         setOffset((currentOffset) => {
             const newOffset = currentOffset + PAGE_WIDTH;
@@ -22,7 +25,7 @@ export const Carousel = ({ children, PAGE_WIDTH }: any,) => {
             }
         })
     };
-
+    console.log(children)
     const handleRightArrowClick = () => {
         setOffset((currentOffset) => {
             //currentOffset - это предыдущее сосотяние
@@ -42,17 +45,19 @@ export const Carousel = ({ children, PAGE_WIDTH }: any,) => {
         })
     };
     useEffect(() => {
-        console.log(children)
+        // console.log(children.length)
         if (!children.length || children[0] === undefined) return;
 
-        console.log(children)
+        setRowWidth(`${PAGE_WIDTH * children.length}px`);
+        setWidthDiv(`${PAGE_WIDTH}px`);
+        // console.log(children)
         setPages(
             Children.map(children, (child) => {
                 return cloneElement(child, {
                     style: {
-                        minWidth: `${PAGE_WIDTH}px`,
+                        width: '100%',
                         maxWidth: `${PAGE_WIDTH}px`,
-                        height: '100%',
+                        objectFit: 'cover',
                     },
                 })
             })
@@ -60,9 +65,9 @@ export const Carousel = ({ children, PAGE_WIDTH }: any,) => {
     }, [PAGE_WIDTH, children]);
 
     return (
-        <div className="flex flex-row items-center w-[450px] h-[250px]">
+        <div className={`flex  items-center h-[100%] `} style={{ width: `${widthDiv}` }}>
             <FaChevronLeft className="cursor-pointer" onClick={handleLeftArrowClick} />
-            <div className="h-[100%] w-[100%] overflow-hidden">
+            <div className={`h-[100%]   overflow-hidden w-[100%]`} >
                 <div
                     className="h-[100%] flex  "
                     style={{

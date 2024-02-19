@@ -16,6 +16,7 @@ export default function NavLinks() {
             key={link.name}
             href={link.href}
             aria-current={pathname === link.href ? 'page' : undefined}
+
             className={clsx(
               ' flex h-[48px] items-center  gap-2 rounded-md  p-3  text-sm font-medium   flex-auto w-48 sm:w-56 justify-start  px-3',
               'dark:bg-gray-800 dark:text-stone-300 dark:hover:bg-gray-800 dark:hover:text-[#AE4A84]',

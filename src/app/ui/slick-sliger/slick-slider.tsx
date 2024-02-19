@@ -1,10 +1,11 @@
 'use client'
 import React from "react";
 import Slider from "react-slick";
-import './page.css';
+import Image from 'next/image';
 import './slick-theme.css';
+import './slick.css';
 
-const SlickSlider = ({ }) => {
+const SlickSlider = ({ arrayImages, nameAlt }: any) => {
     const settings = {
         dots: true,
         infinite: true,
@@ -13,12 +14,16 @@ const SlickSlider = ({ }) => {
         slidesToScroll: 1,
         swipeToSlide: true,
     };
+    console.log(arrayImages);
     return (
-        <div className="slider-container">
-            <Slider {...settings}>
 
-            </Slider>
-        </div>
+        <Slider {...settings}>
+            {arrayImages?.map((item: any, index: number) =>
+                <Image key={index} priority={false} src={item} alt={nameAlt} />
+
+            )}
+        </Slider>
+
     );
 }
 

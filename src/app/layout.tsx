@@ -32,7 +32,7 @@ export default function RootLayout({
             <div className="sm:w-64 ">
               <SideNav />
             </div>
-            <section className=" mr-2 grid grid-cols-1  justify-center w-[100%] sm:w-[calc(100%-256px)] overflow-y-auto overflow-x-hidden ">
+            <section className="flex-row justify-center mr-2 w-[100%] sm:w-[calc(100%-256px)] overflow-y-auto overflow-x-hidden ">
               {children}
             </section>
           </div>
