@@ -3,13 +3,24 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Image from 'next/image';
 
 
+interface IImg {
+    src: any;
+    alt: string;
+    title: string;
+    width: number;
+    height: number;
 
-// const PAGE_WIDTH = 450;
+}
+interface IPageImg {
+    page: IImg[];
+    PAGE_WIDTH: number;
+    pageAlt: string;
+}
 
-export const Carousel = ({ page, PAGE_WIDTH, pageAlt }: any) => {
+export const Carousel = ({ page, PAGE_WIDTH, pageAlt }: IPageImg) => {
     const [widthDiv, setWidthDiv] = useState('');
     const [slide, setSlide] = useState(0);
-    const [slidePage, setSlidePage] = useState();
+    const [slidePage, setSlidePage] = useState<IImg>();
 
     const handleLeftArrowClick = () => {
         if (slide <= 0) {
@@ -30,12 +41,10 @@ export const Carousel = ({ page, PAGE_WIDTH, pageAlt }: any) => {
     useEffect(() => {
         let w: Element | null = document.querySelector('#parent-img')
         // console.log(w?.clientWidth);
-
         if (!page) return;
         setWidthDiv(`${PAGE_WIDTH}px`);
-
         setSlidePage(
-            page!.find((child: any, i: number) => i === slide)
+            page.find((child: {}, i: number) => i === slide)
         );
 
     }, [PAGE_WIDTH, slide, page, slidePage]);
