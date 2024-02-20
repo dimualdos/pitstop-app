@@ -36,7 +36,7 @@ export default function RootLayout({
               {children}
             </section>
           </div>
-          <div id='portal'></div>
+          <div id='portal' aria-modal="true"></div>
         </body>
       </StoreProvider>
     </html>

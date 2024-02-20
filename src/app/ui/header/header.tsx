@@ -31,7 +31,7 @@ export default function Header() {
     return (
         <div className='flex flex-row flex-wrap basis-full justify-end'>
             <header className="dark:bg-gray-800 bg-gray-200 flex flex-row justify-between  gap-4 content-center w-max basis-full items-center   h-12 " >
-                <Link href="/">
+                <Link href="/" aria-label="Ссылка на главную страницу">
                     <Image src={logo} role="banner" aria-label="PitStop Logo" alt="logo" className="ml-2 sm:h-10 sm:w-10 w-7 h-auto" />
                 </Link>
 
@@ -51,8 +51,8 @@ export default function Header() {
                         <button className={clsx(
                             'dark:bg-[#142030] dark:text-stone-300  hover:text-[#AE4A84] hover:bg-[#bee5fa] bg-gray-300 text-blue-600  px-2 py-1 rounded-md ',
                             {
-                                'bg-[#bee5fa] text-[#a3457c]': pathname === '/contacts',
-                                'dark:text-[#ae4a84]': pathname === '/contacts'
+                                'bg-[#bee5fa] text-[#ae4a87]': pathname === '/contacts',
+                                'dark:text-[#ae4a87]': pathname === '/contacts'
                             },
                         )} >
                             <p>Контакты</p>
@@ -63,6 +63,7 @@ export default function Header() {
                     </Link> */}
 
                     <button
+                        aria-label="Кнопка меню"
                         onClick={handleMenuClick}
                         className={clsx(
                             "block sm:hidden  dark:bg-[#142030] bg-gray-300 dark:text-stone-300 px-2 py-1 rounded-md",
