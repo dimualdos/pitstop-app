@@ -5,6 +5,7 @@ import SideNav from "./ui/menu/sidenav";
 import Header from "./ui/header/header";
 import { StoreProvider } from "./ui/services/store-provider";
 import "./globals.css";
+import Footer from "./ui/footer/footer";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -28,7 +29,7 @@ export default function RootLayout({
         <body className={`${inter.className} `}>
           <Header />
 
-          <div className={`h-[88vh] flex basis-full  flex-row mt-4`}>
+          <div className={`h-[82vh] flex basis-full  flex-row mt-4`}>
             <div className="sm:w-64 ">
               <SideNav />
             </div>
@@ -36,6 +37,7 @@ export default function RootLayout({
               {children}
             </section>
           </div>
+          <Footer />
           <div id='portal' aria-modal="true"></div>
         </body>
       </StoreProvider>

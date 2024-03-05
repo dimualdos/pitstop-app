@@ -29,7 +29,7 @@ export const pagesArr = [
                    то целесообразнее купить не поврежденную деталь новую или б/у.
                    Тогда можно будет гарантировать качество работ.
                    В любом случае во время осмотра мастер скажет как лучше поступить в данном случае и чтоб меньше всего было денежных атрат.`,
-        imagesArray: [bamperRepairPorsh, bamperRepairPorsh1]
+        imagesArray: [bamperRepairPorsh, bamperRepairPorsh1, bamperRepairPorsh1, bamperRepairPorsh, bamperRepairPorsh1, bamperRepairPorsh, bamperRepairPorsh1, bamperRepairPorsh, bamperRepairPorsh1],
     },
     {
         title: 'Замена бампера авто',

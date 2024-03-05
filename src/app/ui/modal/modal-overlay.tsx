@@ -34,7 +34,7 @@ type TModalOverlay = {
 
 const ModalOverlay: FC<TModalOverlay> = ({ onClose }) => {
     return (
-        <div onClick={onClose} ></div>
+        <div onClick={onClose} className='bg-slate-50/50  fixed top-0 bottom-0 left-0 right-0'></div>
     )
 }
 

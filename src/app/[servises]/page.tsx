@@ -1,6 +1,7 @@
 'use client'
 import usePageObj from '../ui/services/hooks/use-page';
 import { Carousel } from '../ui/sliger/carousel';
+import SwipSlider from '../ui/sliger/swipper';
 
 const Page = ({ params }: { params: { servises: string } }) => {
     const { page } = usePageObj(params.servises);
@@ -19,9 +20,12 @@ const Page = ({ params }: { params: { servises: string } }) => {
                     </div>
 
                     <div aria-label="Карусель фотографиями работ" className='flex flex-row justify-center mb-2'>
-                        <Carousel PAGE_WIDTH={WIDTH_SLIDE} page={page?.imagesArray} pageAlt={page?.H1} />
+                        <Carousel PAGE_WIDTH={WIDTH_SLIDE} imagesArr={page?.imagesArray} pageAlt={page?.H1} />
                     </div>
+                    {/* <div aria-label="Карусель фотографиями работ" className='flex flex-row justify-center mb-2'>
 
+                        <SwipSlider />
+                    </div> */}
                     <div className='text-left select-none hyphens-auto'>{page?.firstDivContent}</div>
                 </div>
             )}

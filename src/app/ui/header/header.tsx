@@ -14,6 +14,8 @@ import clsx from 'clsx';
 
 
 export default function Header() {
+    const { isOpen } = useAppSelector(state => state.openStateReduser);
+
     const pathname = usePathname();
     const dispatch = useAppDispatch();
     const [showMenu, setShowMenu] = useState(false);
@@ -24,13 +26,16 @@ export default function Header() {
 
     useEffect(() => {
         dispatch(openState(showMenu));
-
+        console.log(showMenu);
     }, [dispatch, showMenu]);
 
+    useEffect(() => {
+        setShowMenu(isOpen);
+    }, [isOpen]);
 
     return (
-        <div className='flex flex-row flex-wrap basis-full justify-end'>
-            <header className="dark:bg-gray-800 bg-gray-200 flex flex-row justify-between  gap-4 content-center w-max basis-full items-center   h-12 " >
+        <header className='flex flex-row flex-wrap basis-full'>
+            <div className="dark:bg-gray-800 bg-gray-200 flex flex-row justify-between  gap-4 content-center w-max basis-full items-center   h-12 " >
                 <Link href="/" aria-label="Ссылка на главную страницу">
                     <Image src={logo} role="banner" aria-label="PitStop Logo" alt="logo" className="ml-2 sm:h-10 sm:w-10 w-7 h-auto" />
                 </Link>
@@ -49,10 +54,9 @@ export default function Header() {
                 <div className="flex flex-row gap-2 justify-items-end mr-2">
                     <Link href="/contacts">
                         <button className={clsx(
-                            'dark:bg-[#142030] dark:text-stone-300  hover:text-[#AE4A84] hover:bg-[#bee5fa] bg-gray-300 text-blue-600  px-2 py-1 rounded-md ',
+                            'dark:bg-[#142030] dark:hover:bg-[#142030] dark:text-stone-300  hover:text-[#AE4A84] hover:bg-[#bee5fa] bg-gray-300 text-blue-600  px-2 py-1 rounded-md ',
                             {
-                                'bg-[#bee5fa] text-[#ae4a87]': pathname === '/contacts',
-                                'dark:text-[#ae4a87]': pathname === '/contacts'
+                                'text-pink-800': pathname === '/contacts'
                             },
                         )} >
                             <p>Контакты</p>
@@ -66,13 +70,13 @@ export default function Header() {
                         aria-label="Кнопка меню"
                         onClick={handleMenuClick}
                         className={clsx(
-                            "block sm:hidden  dark:bg-[#142030] bg-gray-300 dark:text-stone-300 px-2 py-1 rounded-md",
+                            "block sm:hidden   dark:bg-[#142030] bg-gray-300 dark:text-stone-300 px-2 py-1 rounded-md",
                         )}>
                         <Image src={menuIcon} alt="menuIcon" className="place-self-center w-4 sm:w-6 h-auto items-center" />
                     </button>
                 </div>
 
-            </header>
+            </div>
             {/* <div className="flex flex-row gap-2 m-2">
                 <Link href="/">
                     <button className="dark:bg-[#142030] bg-sky-600 dark:text-stone-300 px-2 py-1 block sm:hidden rounded-md">Контакты</button>
@@ -81,6 +85,6 @@ export default function Header() {
                     <button className="dark:bg-[#142030] bg-sky-600 dark:text-stone-300 px-2 py-1 block  sm:hidden rounded-md">Отзывы</button>
                 </Link>
             </div> */}
-        </div>
+        </header>
     )
 }

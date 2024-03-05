@@ -1,6 +1,7 @@
 import { useEffect, useState, Children, cloneElement, ReactElement, JSXElementConstructor } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Image from 'next/image';
+import clsx from 'clsx';
 
 
 interface IImg {
@@ -12,65 +13,105 @@ interface IImg {
 
 }
 interface IPageImg {
-    page: IImg[];
+    imagesArr: IImg[];
     PAGE_WIDTH: number;
     pageAlt: string;
 }
 
-export const Carousel = ({ page, PAGE_WIDTH, pageAlt }: IPageImg) => {
+export const Carousel = ({ imagesArr, PAGE_WIDTH, pageAlt }: IPageImg) => {
     const [widthDiv, setWidthDiv] = useState('');
-    const [slide, setSlide] = useState(0);
+    const [slideNumber, setSlideNumber] = useState(0);
     const [slidePage, setSlidePage] = useState<IImg>();
+    // const [slideValue, setSlideValue] = useState<number[]>([]);
 
     const handleLeftArrowClick = () => {
-        if (slide <= 0) {
-            setSlide(page.length - 1)
+        if (slideNumber <= 0) {
+            setSlideNumber(imagesArr.length - 1)
         } else {
-            setSlide(slide - 1)
+            setSlideNumber(slideNumber - 1)
         }
     };
 
     const handleRightArrowClick = () => {
-        if (slide >= page.length - 1) {
-            setSlide(0)
+        if (slideNumber >= imagesArr.length - 1) {
+            setSlideNumber(0)
         } else {
-            setSlide(slide + 1)
+            setSlideNumber(slideNumber + 1)
         }
     };
+    const handleDotClick = (index: number) => {
+        setSlideNumber(index)
+    };
+
 
     useEffect(() => {
-        if (!page) return;
+        if (!imagesArr) return;
         setWidthDiv(`${PAGE_WIDTH}px`);
         setSlidePage(
-            page.find((child: {}, i: number) => i === slide)
+            imagesArr.find((child: {}, i: number) => i === slideNumber)
         );
-
-    }, [PAGE_WIDTH, slide, page, slidePage]);
+        // setSlideValue(Array.from({ length: imagesArr?.length }, (_, i) => i + 1));
+    }, [PAGE_WIDTH, slideNumber, imagesArr, slidePage]);
 
     return (
-        <div>
-            <div className={`flex  items-center h-[100%] `} style={{ width: `${widthDiv}` }}>
+        <div className='flex flex-col align-middle'>
+            <div className={`flex  items-center h-[100%] `} style={{ maxWidth: `${widthDiv}` }}>
 
-                <FaChevronLeft type='button' aria-label="Кнопка влево" className="cursor-pointer h-[30px] sm:h-[60px] w-3 sm:w-5 mr-3" onClick={handleLeftArrowClick} />
+                <FaChevronLeft
+                    type='button'
+                    aria-label="Кнопка влево"
+                    className="cursor-pointer hidden sm:block h-[50px] sm:h-[60px] w-5 mr-1 sm:mr-3"
+                    onClick={handleLeftArrowClick} />
 
-                <div className={`h-[100%]   overflow-hidden w-[100%]`} >
-                    <div
-                        className="h-[100%] flex  "
-                    >
-                        {slidePage && <Image className='select-none'
+                <div className={`flex items-center relative h-[100%] overflow-hidden w-auto`} >
+                    {/* стрелки перемотки карусели для маленьких экранов */}
+                    <button
+                        onClick={handleLeftArrowClick}
+                        className="cursor-pointer absolute sm:hidden  h-[100%] w-[10%]  bg-slate-50/30" >
+                        <FaChevronLeft
+                            type='button'
+                            aria-label="Кнопка влево"
+                            className=" h-[20px] w-[100%] "
+                        />
+                    </button>
+                    {/* изображения карусели */}
+                    <div className="h-[100%] w-[100%] " >
+                        {slidePage && <Image className='select-none z-0'
                             priority={true} src={slidePage} alt={pageAlt} />}
                     </div>
-                </div>
-                <FaChevronRight type='button' aria-label="Кнопка вправо" onClick={handleRightArrowClick} className="cursor-pointer h-[30px] sm:h-[60px] w-3 sm:w-5 ml-3" />
-            </div>
-            <div className='flex w-[90%] items-center  justify-end '>
-                <ol className='text-center text-[12px] sm:text-[16px] flex mr-4 pr-1'>
-                    {page.length > 0 && page.map((item, index) => {
-                        return <li className='w-[12px] h-[12px] cursor-pointer mr-1 ml-1 bg-blue-600 dark:bg-stone-200 bg-clip-padding rounded-full' key={index}></li>
-                    })}
-                </ol>
-                <p className="text-center text-[12px] sm:text-[16px] w-[8]">{slide + 1}/{page.length}</p>
+                    {/* стрелки перемотки карусели для маленьких экранов */}
+                    <button
+                        onClick={handleRightArrowClick}
+                        className="sm:hidden  h-[100%] w-[10%] cursor-pointer absolute ml-[90%] bg-slate-50/30" >
+                        <FaChevronRight
+                            type='button'
+                            aria-label="Кнопка вправо"
+                            className=" h-[20px]  w-[100%] "
+                        />
+                    </button>
 
+                </div>
+                <FaChevronRight
+                    type='button'
+                    aria-label="Кнопка вправо"
+                    className="cursor-pointer hidden sm:block h-[50px] sm:h-[60px] w-5 ml-1 sm:ml-3"
+                    onClick={handleRightArrowClick} />
+            </div>
+            {/* точки слайдера */}
+            <div className='flex mt-2  justify-center  items-center'>
+                <div className='justify-items-end text-[12px] sm:text-[16px] flex  gap-1.5'>
+                    {imagesArr.length > 0 && imagesArr.map((item, index) => {
+                        return <button
+                            onClick={() => handleDotClick(index)}
+                            key={index}
+                            disabled={slideNumber === index}
+                            className={clsx(
+                                'flex items-center justify-center h-2 sm:h-3 w-2 sm:w-3 rounded-full bg-stone-400/70 border-stone-400/70',
+                                { 'bg-pink-800/80 border-pink-800/80 ': slideNumber === index },
+                            )}>
+                        </button>
+                    })}
+                </div>
             </div>
         </div>
 

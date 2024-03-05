@@ -9,7 +9,7 @@ import React from 'react';
 type TModal = {
     children: ReactNode;
     onClose: () => void;
-    overlay?: boolean;
+    overlay: boolean;
 
 };
 

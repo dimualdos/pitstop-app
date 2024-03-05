@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 interface OpenState {
-    value: boolean
+    isOpen: boolean
 }
 
 const initialState: OpenState = {
-    value: false
+    isOpen: false
 }
 
 const openSlice = createSlice({
@@ -13,7 +13,7 @@ const openSlice = createSlice({
     initialState,
     reducers: {
         openState(state, action: PayloadAction<boolean>) {
-            state.value = action.payload
+            state.isOpen = action.payload
         },
     },
 });
