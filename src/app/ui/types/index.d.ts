@@ -2,6 +2,17 @@ import { YMap } from "ymaps3";
 
 declare let map: YMap;
 
+interface IimagesArr {
+  auto: string;
+  repairArray: {
+    src: any;
+    alt: string;
+    title: string;
+    width: number;
+    height: number;
+  }[];
+}
+
 export interface IPages {
   title: string;
   description: string;
@@ -14,11 +25,5 @@ export interface IPages {
   ulFirstDiv: string;
   liFirstDiv: string[];
   firstDivContent: string;
-  imagesArray: {
-    src: any;
-    alt: string;
-    title: string;
-    width: number;
-    height: number;
-  }[];
+  imagesArray: StaticImageData[];
 }

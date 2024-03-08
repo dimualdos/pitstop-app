@@ -1,5 +1,15 @@
-import bamperRepairPorsh from '../../../../public/Ремонт-бампера/Porshe-bumper-repair/Porshe-bumper-repair.jpg'
-import bamperRepairPorsh1 from '../../../../public/Ремонт-бампера/Porshe-bumper-repair/Porshe-bumper-repair1.jpg'
+import bamperRepairPorsh from '../../../../public/Ремонт-бампера/Porshe-bumper-repair/Porshe-bumper-repair.jpg';
+import bamperRepairPorsh1 from '../../../../public/Ремонт-бампера/Porshe-bumper-repair/Porshe-bumper-repair1.jpg';
+import bamperRepairPorsh2 from '../../../../public/Ремонт-бампера/Porshe-bumper-repair/Porshe-bumper-repair2.jpg';
+import bamperRepairPorsh3 from '../../../../public/Ремонт-бампера/Porshe-bumper-repair/Porshe-bumper-repair3.jpg';
+import mersBamperRepair from '../../../../public/Ремонт-бампера/mersedes-bumper-repair/mersedes-bumper-repair.jpg';
+import mersBamperRepair1 from '../../../../public/Ремонт-бампера/mersedes-bumper-repair/mersedes-bumper-repair1.jpg';
+import mersBamperRepair2 from '../../../../public/Ремонт-бампера/mersedes-bumper-repair/mersedes-bumper-repair2.jpg';
+import mersBamperRepair3 from '../../../../public/Ремонт-бампера/mersedes-bumper-repair/mersedes-bumper-repair3.jpg';
+import mazdBamperRepair from '../../../../public/Ремонт-бампера/mazda-bumper-repair/Mazda-bumper-repair.jpg';
+import mazdBamperRepair1 from '../../../../public/Ремонт-бампера/mazda-bumper-repair/Mazda-bumper-repair1.jpg';
+import hondaBumperRepair from '../../../../public/Ремонт-бампера/honda-bumper-repair/honda-bumper-repair.jpg';
+import hondaBumperRepair1 from '../../../../public/Ремонт-бампера/honda-bumper-repair/honda-bumper-repair1.jpg';
 
 
 export const pagesArr = [
@@ -29,7 +39,24 @@ export const pagesArr = [
                    то целесообразнее купить не поврежденную деталь новую или б/у.
                    Тогда можно будет гарантировать качество работ.
                    В любом случае во время осмотра мастер скажет как лучше поступить в данном случае и чтоб меньше всего было денежных атрат.`,
-        imagesArray: [bamperRepairPorsh, bamperRepairPorsh1, bamperRepairPorsh1, bamperRepairPorsh, bamperRepairPorsh1, bamperRepairPorsh, bamperRepairPorsh1, bamperRepairPorsh, bamperRepairPorsh1],
+        imagesArray: [{
+            auto: 'posche',
+            repairArray: [bamperRepairPorsh, bamperRepairPorsh1, bamperRepairPorsh2, bamperRepairPorsh3],
+        },
+        {
+            auto: 'mersedes',
+            repairArray: [mersBamperRepair, mersBamperRepair1, mersBamperRepair2, mersBamperRepair3],
+
+        },
+        {
+            auto: 'Mazda',
+            repairArray: [mazdBamperRepair, mazdBamperRepair1],
+        },
+        {
+            auto: 'Honda',
+            repairArray: [hondaBumperRepair1, hondaBumperRepair],
+        },
+        ],
     },
     {
         title: 'Замена бампера авто',
@@ -56,7 +83,14 @@ export const pagesArr = [
                    Мы его оперативно установим вместо старого. Если же у Вас есть новый бампер или бампер, который требуется красить, то заказав покраску у нас, Вы получите качественную услугу. 
                    Установив бампер на место, мы выставим зазоры (если бампер не китайский и нет нарушения геометрии сопряженных деталей).
                    Мы можем провести предварительную консультацию по WhatsApp 8(985) 280-34-34`,
-        imagesArray: [bamperRepairPorsh, bamperRepairPorsh1]
+        imagesArray: [{
+            auto: 'posche',
+            repairArray: [bamperRepairPorsh, bamperRepairPorsh1, bamperRepairPorsh2, bamperRepairPorsh3]
+        },
+        {
+            auto: 'mersedes',
+            repairArray: [mersBamperRepair, mersBamperRepair1, mersBamperRepair2, mersBamperRepair3]
 
+        }],
     }
 ]

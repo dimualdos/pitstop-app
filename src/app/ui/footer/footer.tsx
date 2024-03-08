@@ -14,34 +14,32 @@ import clsx from 'clsx';
 
 
 export default function Footer() {
-
+    const [dateYear, setDateYear] = useState(0);
 
     useEffect(() => {
-        const date = new Date();
-        console.log(date.getFullYear());
+        const date = new Date().getFullYear();
+        setDateYear(date);
     }, []);
 
 
     return (
-        <footer className=' absolute bottom-0 flex flex-row flex-wrap  w-[100%]'>
-            <div className="dark:bg-gray-800 bg-gray-200 flex flex-col p-2 gap-1 basis-full items-center   h-12 " >
+        <footer className='absolute bottom-0   w-[100%]'>
+            <div className="dark:bg-gray-800 bg-gray-200 flex flex-col p-2 gap-1 basis-full items-center   max-h-[10vh] " >
 
-
-                <div className="flex flex-row w-[100%] justify-center   gap-4  dark:text-stone-300">
+                {/* телефон */}
+                <div className="flex flex-row  w-[100%] justify-center   gap-2  dark:text-stone-300">
                     <Link href={'mailto:info@pitstop-online.ru'} className="place-self-center flex flex-row   items-center ">
                         <Image src={mailIcon} alt='mail' className=' w-4 h-auto mr-1' />
                         <p className='flex-auto text-xs md:text-base text-pink-800'>info@pitstop-online.ru</p>
 
                     </Link>
 
-                    <Link href="https://api.whatsapp.com/send?phone=79852803434" className="place-self-center">
-                        <Image src={whatsappImage} alt="whatsapp-image" className="place-self-center w-4 sm:w-6 h-auto items-center" />
-                    </Link>
                 </div>
-                <div className='flex flex-row items-center gap-2'>
-                    <p>© {new Date().getFullYear()}.</p>
+                {/* вычисление года и адрес центра */}
+                <div className='flex flex-row justify-center items-center gap-2'>
+                    <p>© {dateYear}.</p>
                     <Link href='/'>
-                        <p className='text-xs md:text-base'>ПитСтоп. 105187, Москва, Борисовская 37а</p>
+                        <p className='text-xs md:text-base hyphens-auto'>ПитСтоп. 105187, Москва, Борисовская 37а</p>
                     </Link>
 
                 </div>

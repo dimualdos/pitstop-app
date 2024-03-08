@@ -29,7 +29,7 @@ export default function RootLayout({
         <body className={`${inter.className} `}>
           <Header />
 
-          <div className={`h-[82vh] flex basis-full  flex-row mt-4`}>
+          <div className={`h-[78vh] flex basis-full  flex-row mt-4`}>
             <div className="sm:w-64 ">
               <SideNav />
             </div>

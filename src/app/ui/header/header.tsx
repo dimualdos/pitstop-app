@@ -26,7 +26,6 @@ export default function Header() {
 
     useEffect(() => {
         dispatch(openState(showMenu));
-        console.log(showMenu);
     }, [dispatch, showMenu]);
 
     useEffect(() => {
@@ -34,48 +33,44 @@ export default function Header() {
     }, [isOpen]);
 
     return (
-        <header className='flex flex-row flex-wrap basis-full'>
-            <div className="dark:bg-gray-800 bg-gray-200 flex flex-row justify-between  gap-4 content-center w-max basis-full items-center   h-12 " >
-                <Link href="/" aria-label="Ссылка на главную страницу">
-                    <Image src={logo} role="banner" aria-label="PitStop Logo" alt="logo" className="ml-2 sm:h-10 sm:w-10 w-7 h-auto" />
+
+        <header className="dark:bg-gray-800  bg-gray-200 flex flex-row justify-between  gap-4 basis-full items-center h-12" >
+            <Link href="/" aria-label="Ссылка на главную страницу">
+                <Image src={logo} role="banner" aria-label="PitStop Logo" alt="logo" className="ml-2 sm:h-10 sm:w-10 w-7 h-auto" />
+            </Link>
+            {/* ватсап и телефон */}
+            <div className="flex flex-row gap-1 sm:gap-4  dark:text-stone-300">
+                <Link href={'tel:+79852803434'} className="place-self-center flex flex-row   items-center ">
+                    <Image src={phoneIcon} alt='phone' className='hidden w-4 sm:w-6  sm:block h-auto mr-2' />
+                    <p className='flex-auto text-xs md:text-base '>8 (985) 280-34-34</p>
+
+                </Link>
+                <Link href="https://api.whatsapp.com/send?phone=79852803434" className="place-self-center">
+                    <Image src={whatsappImage} alt="whatsapp-image" className="place-self-center w-4  h-auto items-center" />
+                </Link>
+            </div>
+            {/* контакты кнопка */}
+            <div className="flex flex-row gap-2 justify-items-end mr-2">
+                <Link href="/contacts">
+                    <button className={clsx(
+                        'dark:bg-[#142030] dark:hover:bg-[#142030] dark:text-stone-300  hover:text-[#AE4A84] hover:bg-[#bee5fa] bg-gray-300 text-blue-600  px-2 py-1 rounded-md ',
+                        {
+                            'text-pink-800': pathname === '/contacts'
+                        },
+                    )} >
+                        <p>Контакты</p>
+                    </button>
                 </Link>
 
-                <div className="flex flex-row  gap-4  dark:text-stone-300">
-                    <Link href={'tel:+79852803434'} className="place-self-center flex flex-row   items-center ">
-                        <Image src={phoneIcon} alt='phone' className='hidden w-4 sm:w-6  sm:block h-auto mr-2' />
-                        <p className='flex-auto text-xs md:text-base '>8 (985) 280-34-34</p>
-
-                    </Link>
-                    <Link href="https://api.whatsapp.com/send?phone=79852803434" className="place-self-center">
-                        <Image src={whatsappImage} alt="whatsapp-image" className="place-self-center w-4 sm:w-6 h-auto items-center" />
-                    </Link>
-                </div>
-
-                <div className="flex flex-row gap-2 justify-items-end mr-2">
-                    <Link href="/contacts">
-                        <button className={clsx(
-                            'dark:bg-[#142030] dark:hover:bg-[#142030] dark:text-stone-300  hover:text-[#AE4A84] hover:bg-[#bee5fa] bg-gray-300 text-blue-600  px-2 py-1 rounded-md ',
-                            {
-                                'text-pink-800': pathname === '/contacts'
-                            },
-                        )} >
-                            <p>Контакты</p>
-                        </button>
-                    </Link>
-                    {/* <Link href="/">
-                        <button className="dark:bg-[#142030] bg-sky-600 dark:text-stone-300 px-2 py-1 hidden  sm:block rounded-md">Отзывы</button>
-                    </Link> */}
-
-                    <button
-                        aria-label="Кнопка меню"
-                        onClick={handleMenuClick}
-                        className={clsx(
-                            "block sm:hidden   dark:bg-[#142030] bg-gray-300 dark:text-stone-300 px-2 py-1 rounded-md",
-                        )}>
-                        <Image src={menuIcon} alt="menuIcon" className="place-self-center w-4 sm:w-6 h-auto items-center" />
-                    </button>
-                </div>
-
+                {/* кнопка меню для мобильного телефона */}
+                <button
+                    aria-label="Кнопка меню"
+                    onClick={handleMenuClick}
+                    className={clsx(
+                        "block sm:hidden   dark:bg-[#142030] bg-gray-300 dark:text-stone-300 px-1  rounded-md",
+                    )}>
+                    <Image src={menuIcon} alt="menuIcon" className="place-self-center min-w-4 max-w-4 sm:w-6 h-auto items-center" />
+                </button>
             </div>
             {/* <div className="flex flex-row gap-2 m-2">
                 <Link href="/">
@@ -86,5 +81,7 @@ export default function Header() {
                 </Link>
             </div> */}
         </header>
+
+
     )
 }
