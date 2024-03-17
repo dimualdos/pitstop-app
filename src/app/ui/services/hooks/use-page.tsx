@@ -8,7 +8,7 @@ const usePageObj = (pageName: string) => {
     const [page, setPage] = useState<IPages>();
 
     useEffect(() => {
-        let pageFilter = pagesArr?.find(item => item.path === `/${pageName}`);
+        let pageFilter = pagesArr!.find(item => item.path === `/${pageName}`);
         setPage(pageFilter)
     }, [pageName]);
 

@@ -1,7 +1,3 @@
-import { YMap } from "ymaps3";
-
-declare let map: YMap;
-
 interface IimagesArr {
   auto: string;
   repairArray: {
@@ -22,8 +18,9 @@ export interface IPages {
   priceTitleTible: string;
   priceServiceTable: { service: string; price: string }[];
   H3FirstDiv: string;
-  ulFirstDiv: string;
+  ulFirstTitle?: string;
   liFirstDiv: string[];
   firstDivContent: string;
-  imagesArray: StaticImageData[];
+  imagesArray?: StaticImageData[];
+  youTubeLink?: string;
 }

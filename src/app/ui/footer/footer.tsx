@@ -23,23 +23,23 @@ export default function Footer() {
 
 
     return (
-        <footer className='absolute bottom-0   w-[100%]'>
-            <div className="dark:bg-gray-800 bg-gray-200 flex flex-col p-2 gap-1 basis-full items-center   max-h-[10vh] " >
+        <footer className=' max-h-[60px]   w-[100%]'>
+            <div className="dark:bg-gray-800 bg-gray-200 flex flex-col p-2 gap-1 basis-full items-center    " >
 
                 {/* телефон */}
-                <div className="flex flex-row  w-[100%] justify-center   gap-2  dark:text-stone-300">
+                <div className="flex flex-row  w-[100%] justify-center gap-2  ">
                     <Link href={'mailto:info@pitstop-online.ru'} className="place-self-center flex flex-row   items-center ">
                         <Image src={mailIcon} alt='mail' className=' w-4 h-auto mr-1' />
-                        <p className='flex-auto text-xs md:text-base text-pink-800'>info@pitstop-online.ru</p>
+                        <p className='flex-auto text-xs md:text-base text-[#AE4A84]'>info@pitstop-online.ru</p>
 
                     </Link>
 
                 </div>
                 {/* вычисление года и адрес центра */}
-                <div className='flex flex-row justify-center items-center gap-2'>
-                    <p>© {dateYear}.</p>
+                <div className='flex flex-row justify-center items-center gap-2 dark:text-stone-300'>
+                    <p className='text-[10px] md:text-[12px] hyphens-auto'>© {dateYear}.</p>
                     <Link href='/'>
-                        <p className='text-xs md:text-base hyphens-auto'>ПитСтоп. 105187, Москва, Борисовская 37а</p>
+                        <p className='text-[10px] md:text-[12px] hyphens-auto'>ПитСтоп. 105187, Москва, Борисовская 37а</p>
                     </Link>
 
                 </div>

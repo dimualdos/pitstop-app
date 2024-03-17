@@ -8,7 +8,7 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 17, 27, 41;
@@ -18,7 +18,7 @@
       border-radius: 5px;
     }
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -28,7 +28,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
   @media (max-width: 640px) {
     p,
     button {

@@ -1,9 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import openSlice from "./open-menu-slice";
+import themeSlice from "./theme-slice";
 
 export const store = configureStore({
   reducer: {
     openStateReduser: openSlice,
+    themeAppReduser: themeSlice,
   },
 });
 
