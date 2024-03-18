@@ -65,7 +65,7 @@ export const Carousel: FC<IPageImg> = ({ imagesArr, PAGE_WIDTH, pageAlt, resetIM
 
     return (
         <div className='flex flex-col align-middle'>
-            <div className={`flex  items-center h-[100%] `} style={{ maxWidth: `${widthDiv}` }}>
+            <div className={`flex flex-row  items-center h-[100%] `} style={{ maxWidth: `${widthDiv}` }}>
                 {/* стрелки карусели для  больших экранов */}
                 {/* <FaChevronLeft
                     type='button'
@@ -73,7 +73,7 @@ export const Carousel: FC<IPageImg> = ({ imagesArr, PAGE_WIDTH, pageAlt, resetIM
                     className="cursor-pointer hidden sm:block h-[50px] sm:h-[60px] w-5 mr-1 sm:mr-3"
                     onClick={handleLeftArrowClick} /> */}
 
-                <div className={`flex items-center relative h-[100%] overflow-hidden w-auto`} >
+                <div className={`flex flex-row items-center relative h-[100%] overflow-hidden w-auto`} >
                     {/* стрелки перемотки карусели для маленьких экранов */}
                     <button
                         onClick={handleLeftArrowClick}

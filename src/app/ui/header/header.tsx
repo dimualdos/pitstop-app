@@ -86,10 +86,10 @@ export default function Header() {
             <div className="flex flex-row gap-2 justify-items-end items-center mr-2">
                 {/* конпка выбора темы */}
                 <div onClick={toglleTheme} className="flex flex-row gap-2 m-2 cursor-pointer">
-                    {themeApp === 'light' ? <FaSun className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500/85" /> : <FaMoon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-700/60" />}
+                    {themeApp === 'light' ? <FaSun className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500/85" /> : <FaMoon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-700/70" />}
                 </div>
 
-                <Link href="/contacts">
+                <Link href="/contacts" className='select-none'>
                     <button className={clsx(
                         'dark:bg-[#142030] dark:hover:bg-[#142030] dark:text-stone-300  hover:text-[#AE4A84] hover:bg-[#bee5fa] bg-gray-300 text-blue-600  px-2 py-1 rounded-md ',
                         {

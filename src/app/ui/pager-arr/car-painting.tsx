@@ -20,13 +20,6 @@ import carPaintVW3 from '../../../../public/Покраска-авто/vw/car-pai
 import carPaintVW4 from '../../../../public/Покраска-авто/vw/car-paint4.jpg';
 import carPaintVW5 from '../../../../public/Покраска-авто/vw/car-paint5.jpg';
 
-
-
-
-
-
-
-
 export const carPainting = {
     title: 'Покраска автомобиля в Москве',
     description: 'Покраска автомобиля в Москве на Борисовской 37А, соколиная гора',

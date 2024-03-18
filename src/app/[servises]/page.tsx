@@ -100,7 +100,7 @@ const Page: FC<{ params: { servises: string } }> = ({ params }) => {
                         </ul>)}
                     </div>
                     {/* текстовое описание услуги */}
-                    <p className=' text-left select-none hyphens-auto dark:text-stone-300 indent-4'>{page?.firstDivContent}</p>
+                    <p className=' text-left select-none hyphens-auto dark:text-stone-300 indent-4' ><span dangerouslySetInnerHTML={{ __html: page?.firstDivContent }}></span> </p>
 
                     {/* {page.youTubeLink ? <section>
                         <Suspense fallback={<p>Loading video...</p>}>
