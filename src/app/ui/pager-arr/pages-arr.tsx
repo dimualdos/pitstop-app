@@ -7,6 +7,11 @@ import { carFenderPainting } from './car-fender-painting';
 import { bumperPainting } from './bumper-painting';
 import { hoodPainting } from './painting-the-hood';
 import { roofPainting } from './car-roof-painting';
+import { localPainting } from './local-painting';
+import { bodyPolishing } from './body-polishing';
+import { headlightPolishing } from './headlight-polishing';
+import { polishingScratches } from './polishing-scratches';
+import { dentremovalPDR } from './dent-removal-PDR';
 
 
 export const pagesArr = [
@@ -18,5 +23,10 @@ export const pagesArr = [
     carFenderPainting,
     bumperPainting,
     hoodPainting,
-    roofPainting
+    roofPainting,
+    localPainting,
+    bodyPolishing,
+    headlightPolishing,
+    polishingScratches,
+    dentremovalPDR,
 ]

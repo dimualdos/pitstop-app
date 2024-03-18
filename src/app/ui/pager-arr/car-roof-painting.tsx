@@ -1,45 +1,61 @@
-import hoodPaintFord from '../../../../public/покраска-капота/Ford/painting.jpg';
-import hoodPaintFord1 from '../../../../public/покраска-капота/Ford/painting1.jpg';
-import hoodPaintFord2 from '../../../../public/покраска-капота/Ford/painting2.jpg';
-import hoodPaintFord3 from '../../../../public/покраска-капота/Ford/painting3.jpg';
-import hoodPaintLR from '../../../../public/покраска-капота/Lend-Rover/painting.jpg';
-import hoodPaintLR1 from '../../../../public/покраска-капота/Lend-Rover/painting1.jpg';
-import hoodPaintLR2 from '../../../../public/покраска-капота/Lend-Rover/painting2.jpg';
-import hoodPaintLR3 from '../../../../public/покраска-капота/Lend-Rover/painting3.jpg';
-import hoodPaintMerc from '../../../../public/покраска-капота/mersedes/painting.jpg';
-import hoodPaintMerc1 from '../../../../public/покраска-капота/mersedes/painting1.jpg';
-import hoodPaintMerc2 from '../../../../public/покраска-капота/mersedes/painting2.jpg';
-import hoodPaintMerc3 from '../../../../public/покраска-капота/mersedes/painting3.jpg';
-import hoodPaintMerc4 from '../../../../public/покраска-капота/mersedes/painting4.jpg';
-import hoodPaintMerc5 from '../../../../public/покраска-капота/mersedes/painting5.jpg';
-import hoodPaintMerc6 from '../../../../public/покраска-капота/mersedes/painting6.jpg';
-import hoodPaintMerc7 from '../../../../public/покраска-капота/mersedes/painting7.jpg';
-import hoodPaintMerc8 from '../../../../public/покраска-капота/mersedes/painting8.jpg';
-import hoodPaintRavon from '../../../../public/покраска-капота/Ravon/painting.jpg';
-import hoodPaintRavon1 from '../../../../public/покраска-капота/Ravon/painting1.jpg';
-import hoodPaintRavon2 from '../../../../public/покраска-капота/Ravon/painting2.jpg';
-import hoodPaintRavon3 from '../../../../public/покраска-капота/Ravon/painting3.jpg';
-import hoodPaintRavon4 from '../../../../public/покраска-капота/Ravon/painting4.jpg';
-
+import hoodPaintMits from '../../../../public/покраска-крыши/Mitsubishi/mits.jpg';
+import hoodPaintMits1 from '../../../../public/покраска-крыши/Mitsubishi/mits1.jpg';
+import hoodPaintSSang from '../../../../public/покраска-крыши/SsangYong/eng.jpg';
+import hoodPaintSSang1 from '../../../../public/покраска-крыши/SsangYong/eng1.jpg';
+import hoodPaintSSang2 from '../../../../public/покраска-крыши/SsangYong/eng2.jpg';
+import hoodPaintSSang3 from '../../../../public/покраска-крыши/SsangYong/eng3.jpg';
+import hoodPaintSSang4 from '../../../../public/покраска-крыши/SsangYong/eng4.jpg';
+import hoodPaintSSang5 from '../../../../public/покраска-крыши/SsangYong/eng5.jpg';
+import hoodPaintSSang6 from '../../../../public/покраска-крыши/SsangYong/eng6.jpg';
+import hoodPaintSSang7 from '../../../../public/покраска-крыши/SsangYong/eng7.jpg';
+import hoodPaintSSang8 from '../../../../public/покраска-крыши/SsangYong/eng8.jpg';
+import hoodPaintSSang9 from '../../../../public/покраска-крыши/SsangYong/eng9.jpg';
+import hoodPaintSSang10 from '../../../../public/покраска-крыши/SsangYong/eng10.jpg';
+import hoodPaintSSang11 from '../../../../public/покраска-крыши/SsangYong/eng11.jpg';
+import hoodPaintVolkswagen from '../../../../public/покраска-крыши/Tiguan/wv.jpg';
+import hoodPaintVolkswagen1 from '../../../../public/покраска-крыши/Tiguan/wv1.jpg';
+import hoodPaintVolkswagen2 from '../../../../public/покраска-крыши/Tiguan/wv2.jpg';
+import hoodPaintVolkswagen3 from '../../../../public/покраска-крыши/Tiguan/wv3.jpg';
+import hoodPaintVolkswagen4 from '../../../../public/покраска-крыши/Tiguan/wv4.jpg';
+import hoodPaintVolkswagen5 from '../../../../public/покраска-крыши/Tiguan/wv5.jpg';
+import hoodPaintVolkswagen6 from '../../../../public/покраска-крыши/Tiguan/wv6.jpg';
+import hoodPaintVolkswagen7 from '../../../../public/покраска-крыши/Tiguan/wv7.jpg';
+import hoodPaintVolkswagen8 from '../../../../public/покраска-крыши/Tiguan/wv8.jpg';
+import hoodPaintToyota from '../../../../public/покраска-крыши/toyota/car.jpg';
+import hoodPaintToyota1 from '../../../../public/покраска-крыши/toyota/car1.jpg';
+import hoodPaintToyota2 from '../../../../public/покраска-крыши/toyota/car2.jpg';
+import hoodPaintToyota3 from '../../../../public/покраска-крыши/toyota/car3.jpg';
+import hoodPaintToyota4 from '../../../../public/покраска-крыши/toyota/car4.jpg';
+import hoodPaintToyota5 from '../../../../public/покраска-крыши/toyota/car5.jpg';
+import hoodPaintToyota6 from '../../../../public/покраска-крыши/toyota/car6.jpg';
+import hoodPaintVolks from '../../../../public/покраска-крыши/volkswagen/car.jpg';
+import hoodPaintVolks1 from '../../../../public/покраска-крыши/volkswagen/car1.jpg';
+import hoodPaintVolks2 from '../../../../public/покраска-крыши/volkswagen/car2.jpg';
+import hoodPaintVolks3 from '../../../../public/покраска-крыши/volkswagen/car3.jpg';
+import hoodPaintVolks4 from '../../../../public/покраска-крыши/volkswagen/car4.jpg';
+import hoodPaintVolks5 from '../../../../public/покраска-крыши/volkswagen/car5.jpg';
+import hoodPaintVolks6 from '../../../../public/покраска-крыши/volkswagen/car6.jpg';
 
 export const roofPainting = {
     title: 'Покраска крыши авто в Москве',
     description: 'Покраска крыши автомобиля в Москве на Борисовской 37А, соколиная гора',
     path: '/car-roof-painting',
-    H1: `Подарите вашему автомобилю безупречный вид с профессиональной покраской капота.`,
+    H1: `Преобразите свой автомобиль с помощью профессиональной покраски крыши!`,
     H2: 'гарантия на работы 2 года',
     priceTitleTible: 'Стоимость наших услуг',
     priceServiceTable: [
-        { service: 'исправление нарушенной геометрии на капоте', price: 'от 5000р.' },
-        { service: 'покраска капота', price: 'от 12000р.' },
-        { service: 'арматурные работы', price: 'от 1000р.' },
+        { service: 'покраска крыши', price: 'от 15000р.' },
+        { service: 'исправление нарушенной геометрии на крыше', price: 'от 3000р.' },
+        { service: 'арматурные работы', price: 'от 2500р.' },
+        { service: 'съём/установка стекла', price: 'от 3500р.' },
     ],
     H3FirstDiv: 'Покраска крыши авто в PitStop.',
-    ulFirstTitle: 'Наши преимущества:',
+    ulFirstTitle: 'Что влияет на стоимость покраски крыши автомобиля:',
     liFirstDiv: [
-        'доступные цены на наши услуги;',
-        'высокое качество работ;',
-        'оперативность выполнения работ.',
+        'налиичие коррозии;',
+        'необходимо или нет демонтировать стекла;',
+        'нарушение геометрии на крыше;',
+        'наличие предыдущего ремонта.',
     ],
     firstDivContent: `<p>Крыша - это самая большая деталь автомобиля. Поэтому она наиболее сложна в подготовке к окраске и окраска крыши также имеет много сложностей.</p>
 
@@ -48,23 +64,30 @@ export const roofPainting = {
     <p>Коррозия на крыше - пожалуй один из самых опасных дефектов. Частично она проявляется от образования сколов. Но есть коррозия, которая появляется из под уплотнителей стекол (лобовое и заднее). Выглядит она часто как мелкие вспучивания. Такая ржавчина въелась в глубинные слои металла, и чтобы ее устранить требуется много усилий.</p>
     
     <p>Мы советуем Вам не медлить при появлении коррозии, так как со временем она разрастается и затрагивает всё более глубокие слои металла. Глубоко въевшуюся ржавчину порой уже невозможно убрать.</p>
+    <p>
+    В дополнение к покраске крыши, мы также предлагаем широкий спектр других услуг по уходу за автомобилем, таких как полировка кузова, нанесение защитных покрытий и восстановление лакокрасочного покрытия. Обращаясь в Pitstop-Online, вы получаете надежного партнера, который поможет вашему автомобилю выглядеть безупречно.
+    </p>
     `,
     imagesArray: [{
-        auto: 'Ford',
-        repairArray: [hoodPaintFord, hoodPaintFord1, hoodPaintFord2, hoodPaintFord3],
+        auto: 'Mitsubishi',
+        repairArray: [hoodPaintMits, hoodPaintMits1],
     },
     {
-        auto: 'Land Rover',
-        repairArray: [hoodPaintLR, hoodPaintLR1, hoodPaintLR2, hoodPaintLR3],
+        auto: 'SsangYong',
+        repairArray: [hoodPaintSSang, hoodPaintSSang1, hoodPaintSSang2, hoodPaintSSang3, hoodPaintSSang4, hoodPaintSSang5, hoodPaintSSang6, hoodPaintSSang7, hoodPaintSSang8, hoodPaintSSang9, hoodPaintSSang10, hoodPaintSSang11],
 
     },
     {
-        auto: 'Mercedes',
-        repairArray: [hoodPaintMerc, hoodPaintMerc1, hoodPaintMerc2, hoodPaintMerc3, hoodPaintMerc4, hoodPaintMerc5, hoodPaintMerc6, hoodPaintMerc7, hoodPaintMerc8],
+        auto: 'Volkswagen',
+        repairArray: [hoodPaintVolkswagen, hoodPaintVolkswagen1, hoodPaintVolkswagen2, hoodPaintVolkswagen3, hoodPaintVolkswagen4, hoodPaintVolkswagen5, hoodPaintVolkswagen6, hoodPaintVolkswagen7, hoodPaintVolkswagen8,],
     },
     {
-        auto: 'Ravon',
-        repairArray: [hoodPaintRavon, hoodPaintRavon1, hoodPaintRavon2, hoodPaintRavon3, hoodPaintRavon4],
+        auto: 'Toyota',
+        repairArray: [hoodPaintToyota, hoodPaintToyota1, hoodPaintToyota2, hoodPaintToyota3, hoodPaintToyota4, hoodPaintToyota5, hoodPaintToyota6],
+    },
+    {
+        auto: 'Volkswagen',
+        repairArray: [hoodPaintVolks, hoodPaintVolks1, hoodPaintVolks2, hoodPaintVolks3, hoodPaintVolks4, hoodPaintVolks5, hoodPaintVolks6],
     },
     ],
     youTubeLink: 'bOr-DhRbvZs?si=KgtZIbK-j66Wjo1D'
