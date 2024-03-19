@@ -8,8 +8,8 @@ import mersBamperRepair2 from '../../../../public/Ремонт-бампера/me
 import mersBamperRepair3 from '../../../../public/Ремонт-бампера/mersedes-bumper-repair/mersedes-bumper-repair3.jpg';
 import mazdBamperRepair from '../../../../public/Ремонт-бампера/mazda-bumper-repair/Mazda-bumper-repair.jpg';
 import mazdBamperRepair1 from '../../../../public/Ремонт-бампера/mazda-bumper-repair/Mazda-bumper-repair1.jpg';
-import hondaBumperRepair from '../../../../public/Ремонт-бампера/honda-bumper-repair/honda-bumper-repair.jpg';
-import hondaBumperRepair1 from '../../../../public/Ремонт-бампера/honda-bumper-repair/honda-bumper-repair1.jpg';
+import hondaBumperRepair from '../../../../public/Ремонт-бампера/honda-bumper-repair/1.webp';
+import hondaBumperRepair1 from '../../../../public/Ремонт-бампера/honda-bumper-repair/2.webp';
 
 
 export const bumperRepair = {
