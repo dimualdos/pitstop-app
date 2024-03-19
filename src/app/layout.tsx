@@ -8,13 +8,23 @@ import "./globals.css";
 import Footer from "./ui/footer/footer";
 import clsx from "clsx";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Центр кузовного ремонта Пит-Стоп на Борисовской 37а",
-  description: "Кузовной ремонт с гаратией 2 года",
-
+  title: {
+    default: "Центр кузовного ремонта Пит-Стоп на Борисовской 37а",
+    template: "%s | Пит-Стоп | Борисовская 37а",
+  },
+  description: "Кузовной ремонт, покраска деталей кузова, ремонт бамперов, локальная покраска, полировка кузова и фар, удаление вмятин без покраски  с гаратией 2 года",
+  formatDetection: {
+    email: true,
+    address: true,
+    telephone: true,
+  },
+  icons: {
+    shortcut: '../../public/favicon/apple-touch-icon.png',
+    apple: '../../public/favicon/apple-touch-icon.png',
+  },
 };
 
 export default function RootLayout({
@@ -25,10 +35,8 @@ export default function RootLayout({
   return (
 
     <html lang="ru">
-
       <StoreProvider>
         <body className={clsx(`${inter.className} flex flex-col dark:bg-gradient-to-r from-[#20334D] to-[#1b2e43]`,)}>
-
           <Header />
 
           <div className={`flex basis-full  flex-row mt-4 `}>

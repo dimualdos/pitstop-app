@@ -37,7 +37,7 @@ const Modal: FC<TModal> = ({ onClose, children, overlay = true }) => {
     }, [onClose]);
 
     return (mounted && ref.current) ? createPortal(
-        <div className='absolute top-14'>
+        <div className='absolute top-8 z-20'>
             <div  >
                 {children}
             </div>

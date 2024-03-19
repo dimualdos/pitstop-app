@@ -30,7 +30,7 @@ export default function SideNav() {
       </div>
       {isOpen ? <Modal onClose={handleClose} overlay={true}>
         <div className={clsx(
-          `  justify-start h-[calc(100vh-125px)]  flex-col space-x-0 space-y-2 overflow-y-auto  flex dark:bg-[#142030] bg-slate-300  sm:hidden  `,
+          `justify-start h-[85vh]  flex-col space-x-0 space-y-2 overflow-y-auto  flex dark:bg-[#142030] bg-slate-300  sm:hidden  `,
         )}>
           <NavLinks />
         </div>

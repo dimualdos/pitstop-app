@@ -14,7 +14,7 @@ export interface IPages {
   description: string;
   path: string;
   H1: string;
-  H2: string;
+  H2?: string;
   priceTitleTible: string;
   priceServiceTable: { service: string; price: string }[];
   H3FirstDiv: string;

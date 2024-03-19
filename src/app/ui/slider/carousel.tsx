@@ -1,6 +1,6 @@
 import { useEffect, useState, Children, cloneElement, ReactElement, JSXElementConstructor, useMemo, FC, use } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { clsx } from 'clsx/lite';
 
 
@@ -13,10 +13,10 @@ export interface IImg {
 
 }
 interface IPageImg {
-    imagesArr: IImg[];
+    imagesArr: StaticImageData[];
     PAGE_WIDTH: number;
     pageAlt: string;
-    resetIMG: boolean;
+    resetIMG?: boolean;
 }
 
 export const Carousel: FC<IPageImg> = ({ imagesArr, PAGE_WIDTH, pageAlt, resetIMG }) => {
@@ -114,6 +114,7 @@ export const Carousel: FC<IPageImg> = ({ imagesArr, PAGE_WIDTH, pageAlt, resetIM
                 <div className='justify-items-end text-[12px] sm:text-[16px] flex  gap-1.5'>
                     {imagesArr && imagesArr.length > 0 && imagesArr.map((item, indexDot) => {
                         return <button
+                            aria-label="Кнопка карусели с фотографиями"
                             onClick={() => handleDotClick(indexDot)}
                             key={indexDot}
                             // disabled={slideNumber === index}
