@@ -13,7 +13,7 @@ export interface IImg {
 
 }
 interface IPageImg {
-    imagesArr: StaticImageData[];
+    imagesArr: any[];
     PAGE_WIDTH: number;
     pageAlt: string;
     resetIMG?: boolean;

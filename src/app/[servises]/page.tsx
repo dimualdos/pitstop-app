@@ -1,13 +1,9 @@
 'use client'
 import { FC, Suspense, useEffect, useState } from 'react';
-import { notFound } from 'next/navigation';
 import usePageObj from '../ui/services/hooks/use-page';
 import { Carousel } from '../ui/slider/carousel';
 import clsx from 'clsx';
 import { IimagesArr } from '../ui/types';
-import { Metadata } from 'next';
-
-
 
 const Page: FC<{ params: { servises: string } }> = ({ params }) => {
     // получаем данные по нужной странице из массива страниц

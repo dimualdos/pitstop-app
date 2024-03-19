@@ -21,6 +21,6 @@ export interface IPages {
   ulFirstTitle?: string;
   liFirstDiv: string[];
   firstDivContent: string;
-  imagesArray?: StaticImageData[];
+  imagesArray?: any[];
   youTubeLink?: string;
 }
