@@ -7,5 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
     },
     sitemap: 'https://pitstop-online.ru/sitemap.xml',
+    Host: https://pitstop-online.ru,
   }
 }
