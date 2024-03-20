@@ -1,13 +1,16 @@
 'use client'
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import clsx from 'clsx';
 import { links } from './links-map';
 import Image from 'next/image';
 
 export default function NavLinks() {
+  const router = useRouter();
   const pathname = usePathname();
+
+
   return (
     <>
       {links && links.map((link) => {
@@ -24,6 +27,7 @@ export default function NavLinks() {
                 'dark:bg-gray-900/70 dark:[color:#AE4A84] [color:#AE4A84] ': pathname === link.href,
               },
             )}
+
           // style={{ textShadow: '5px 2px 2px pink' }}
 
           >

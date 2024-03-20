@@ -1,14 +1,14 @@
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { GoogleTagManager } from '@next/third-parties/google';
+import { inter } from "./ui/fonts";
 import SideNav from "./ui/menu/sidenav";
 import Header from "./ui/header/header";
 import { StoreProvider } from "./ui/services/store-provider";
-import "./globals.css";
 import Footer from "./ui/footer/footer";
 import clsx from "clsx";
+import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
@@ -25,11 +25,6 @@ export const metadata: Metadata = {
     shortcut: '../../public/favicon/apple-touch-icon.png',
     apple: '../../public/favicon/apple-touch-icon.png',
   },
-  robots: {
-    index: true,
-    follow: true,
-
-  }
 };
 
 export default function RootLayout({
@@ -40,6 +35,7 @@ export default function RootLayout({
   return (
 
     <html lang="ru">
+      <GoogleTagManager gtmId="GTM-5S7PP2" />
       <StoreProvider>
         <body className={clsx(`${inter.className} flex flex-col dark:bg-gradient-to-r from-[#20334D] to-[#1b2e43]`,)}>
           <Header />
@@ -49,7 +45,9 @@ export default function RootLayout({
               <SideNav />
             </div>
             <section className="overflow-y-auto overflow-x-hidden max-h-[calc(100vh-125px)]  mr-2 w-[100%] sm:w-[calc(100%-256px)] ">
+
               {children}
+
             </section>
           </div>
           <div className="fixed bottom-0 w-[100vw]">

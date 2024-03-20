@@ -1,4 +1,5 @@
 'use client'
+import { inter, lusitana } from './ui/fonts';
 import imageCar from '../../public/head/PDR1.webp';
 import imageCar2 from '../../public/head/PDR2.webp';
 import imageCar3 from '../../public/head/body_repair.webp';
@@ -7,32 +8,29 @@ import imageCar5 from '../../public/head/body_repair2.webp';
 import imageCar6 from '../../public/head/body_repair3.webp';
 import imageCar7 from '../../public/head/body_repair4.webp';
 import imageCar8 from '../../public/head/body_repair5.webp';
-
 import imageCar11 from '../../public/head/car_door_painting2.webp';
 import imageCar12 from '../../public/head/car_door_painting3.webp';
 import { Carousel } from './ui/slider/carousel';
 
 
 const arrCar = [imageCar, imageCar2, imageCar3, imageCar4, imageCar5, imageCar6, imageCar7, imageCar8, imageCar11, imageCar12];
-
-
 //главная страница сайта
 
 export default function Home() {
 
   return (
 
-    <main className="flex  flex-col items-center justify-between gap-4">
-      <h1 role="heading" className='text-sm   md:text-base dark:text-stone-300 tracking-wider uppercase text-center font-semibold'>
+    <main className={`${inter.className} flex  flex-col items-center justify-between gap-4`}>
+      <h1 role="heading" className='text-sm md:text-[18px] dark:text-stone-300 tracking-wider uppercase text-center font-semibold'>
         Обновленный автомобиль ждет вас в Pitstop-Online!
       </h1>
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm ">
+      <div className="z-10  w-full items-center justify-between  ">
         <p className=' text-left select-none hyphens-auto dark:text-stone-300 indent-4' >
           Хотите, чтобы ваш автомобиль выглядел как новый? Тогда вам точно стоит обратиться в Pitstop-Online.
           Мы предлагаем широкий спектр услуг по ремонту и уходу за автомобилями, включая покраску, полировку, удаление вмятин и многое другое. </p>
       </div>
       <Carousel imagesArr={arrCar} PAGE_WIDTH={650} pageAlt={'фото кузовного ремонта'} />
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm ">
+      <div className="z-10 max-w-5xl w-full items-center justify-between  ">
         <p className=' text-left select-none hyphens-auto dark:text-stone-300 indent-4' >
           У нас работают только опытные мастера, которые знают, как справиться с любой задачей.
           Мы используем только качественные материалы и современное оборудование, чтобы гарантировать отличный результат.
