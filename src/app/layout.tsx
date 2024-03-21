@@ -49,7 +49,7 @@ export default function RootLayout({
             <div className="sm:w-64 ">
               <SideNav />
             </div>
-            <section className="overflow-y-auto overflow-x-hidden h-[80lvh]    mr-2 w-[100%] sm:w-[calc(100%-256px)] ">
+            <section className="overflow-y-auto overflow-x-hidden h-[75lvh]    mr-2 w-[100%] sm:w-[calc(100%-256px)] ">
 
               {children}
 
