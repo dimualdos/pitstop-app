@@ -22,7 +22,7 @@ export default function SideNav() {
 
 
   return (
-    <nav className="flex h-[80vh]  flex-col  px-2">
+    <nav className="flex h-[78vh]  flex-col  px-2">
       <div className={clsx(
         `  justify-start h-svh flex-col space-x-0 space-y-2 overflow-y-auto overflow-x-hidden hidden  sm:flex  `,
       )}>

@@ -25,10 +25,10 @@ export const metadata: Metadata = {
     shortcut: '../../public/favicon/apple-touch-icon.png',
     apple: '../../public/favicon/apple-touch-icon.png',
   },
-  robots: {
-    index: true,
-    follow: true,
-  }
+  // robots: {
+  //   index: true,
+  //   follow: true,
+  // }
 };
 
 export default function RootLayout({
@@ -48,7 +48,7 @@ export default function RootLayout({
             <div className="sm:w-64 ">
               <SideNav />
             </div>
-            <section className="overflow-y-auto overflow-x-hidden max-h-[calc(100vh-125px)]  mr-2 w-[100%] sm:w-[calc(100%-256px)] ">
+            <section className="overflow-y-auto overflow-x-hidden max-h-[calc(100vh-135px)]  mr-2 w-[100%] sm:w-[calc(100%-256px)] ">
 
               {children}
 

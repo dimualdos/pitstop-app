@@ -41,7 +41,7 @@ export default function Header() {
     useEffect(() => {
         localStorage.getItem('themeMode') === 'dark' ? setThemeApp('dark') : setThemeApp('light');
 
-        if (themeApp === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+        if (themeApp === 'light' || (!('themeMode' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
             document.documentElement.classList.remove('dark');
             document.documentElement.classList.add('light');
         } else {
@@ -62,19 +62,19 @@ export default function Header() {
 
     return (
 
-        <header className="dark:bg-gray-800  bg-gray-200 flex flex-row justify-between  gap-4 basis-full items-center h-12" >
+        <header className="dark:bg-gray-800  bg-gray-200 flex flex-row justify-between gap-2 sm:gap-4 basis-full items-center h-14" >
             <Link href="/" aria-label="Ссылка на главную страницу">
-                <Image src={logo} aria-label="PitStop Logo" alt="logo" className="ml-2 sm:h-10 sm:w-10 w-7 h-auto" />
+                <Image src={logo} aria-label="PitStop Logo" alt="logo" className="ml-2 sm:h-12 sm:w-12 w-9 h-auto" />
             </Link>
             {/* ватсап и телефон */}
-            <div className="flex flex-row gap-3 sm:gap-4  justify-between  dark:text-stone-300">
+            <div className="flex flex-row gap-5  justify-between  dark:text-stone-300">
                 <Link href={'tel:+79852803434'} className="place-self-center flex flex-row   items-center ">
-                    <FaPhone aria-label='телефон' className='text-[#AE4A84] w-3 sm:w-4  h-auto sm:mr-2' />
+                    <FaPhone aria-label='телефон' className='text-[#AE4A84] w-4 sm:w-5  h-auto sm:mr-2' />
                     <p className='hidden sm:block flex-auto text-xs  md:text-base '>8 (985) 280-34-34</p>
                     {/* иконка ватсап */}
                 </Link>
                 <Link href="https://api.whatsapp.com/send?phone=79852803434" className="place-self-center">
-                    <FaWhatsapp aria-label="whatsapp" className="text-[#AE4A84] place-self-center w-4 sm:w-5 h-auto items-center" />
+                    <FaWhatsapp aria-label="whatsapp" className="text-[#AE4A84] place-self-center w-5 sm:w-6 h-auto items-center" />
                 </Link>
             </div>
 
@@ -92,7 +92,7 @@ export default function Header() {
                             'text-pink-800 dark:text-[#AE4A84]': pathname === '/contacts'
                         },
                     )} >
-                        <p className='text-[10px] md:text-base'>Контакты</p>
+                        <p className='text-[12px] md:text-base'>Контакты</p>
                     </button>
                 </Link>
 
@@ -103,7 +103,7 @@ export default function Header() {
                     className={clsx(
                         "block sm:hidden   dark:bg-[#142030] bg-gray-300 dark:text-stone-300 p-1  px-1  rounded-md",
                     )}>
-                    <MdOutlineMenu aria-label="меню" className="text-[#AE4A84] place-self-center min-w-4 max-w-4 sm:w-6 h-auto " />
+                    <MdOutlineMenu aria-label="меню" className="text-[#AE4A84] place-self-center min-w-5 max-w-5 sm:w-6 h-auto " />
                 </button>
             </div>
         </header>

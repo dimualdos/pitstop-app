@@ -51,7 +51,7 @@ const DynamicPage = () => {
             {targetPage && (
                 <div className='flex  gap-4 flex-col pl-2 pr-2 items-center '>
                     <div className=' text-center'>
-                        <h1 role="heading" className='text-sm md:text-[18px] dark:text-stone-300 tracking-wider uppercase font-semibold'>
+                        <h1 role="heading" className='text-base md:text-[18px] dark:text-stone-300 tracking-wider uppercase font-semibold'>
                             {targetPage?.H1}
                         </h1>
                         <h2 className='text-sm md:text-base dark:text-stone-300'>{targetPage?.H2}</h2>
@@ -70,7 +70,7 @@ const DynamicPage = () => {
                                         onClick={() => handleCarBTNClick(item.auto, indexImage)}
                                         disabled={item.auto === nameCarArr}
                                         className={clsx(
-                                            'h-[100%] mr-1 p-0.5 sm:p-1 text-[8px] sm:text-xs border-[#AE4A84] border-solid border-2 rounded bg-slate-300/50 hover:bg-stone-300  hover:text-[#AE4A84] dark:text-stone-200 ',
+                                            'h-[100%] mr-1 p-0.5 sm:p-1 text-[12px] sm:text-sm border-[#AE4A84] border-solid border-2 rounded bg-slate-300/50 hover:bg-stone-300  hover:text-[#AE4A84] dark:text-stone-200 ',
                                             { 'text-stone-200 dark:hover:text-stone-400 hover:text-stone-400': item.auto === nameCarArr })}
                                         // style={`${item.auto}` === nameCarArr && backgroundColour: '#AE4A84'}
                                         style={{ backgroundColor: indexImage === imgIndex ? '#AE4A84' : 'transparent' }}
@@ -97,24 +97,24 @@ const DynamicPage = () => {
                         <tbody>
                             {targetPage.priceServiceTable.length > 0 && targetPage.priceServiceTable.map(
                                 (item: { service: string; price: string; }, indexImage: number) => (<tr key={indexImage} className='p-4 bg-zinc-200/40 dark:bg-stone-900/20'>
-                                    <td className=' border  border-blue-600/30 dark:border-stone-700 text-left text-[10px] md:text-base pl-4 py-2'>{item.service}</td>
-                                    <td className=' border  border-blue-600/30 dark:border-stone-700 text-center text-[10px] md:text-base py-2 tracking-wider '>{item?.price}</td>
+                                    <td className=' border  border-blue-600/30 dark:border-stone-700 text-left text-[12px] sm:text-base pl-4 py-2'>{item.service}</td>
+                                    <td className=' border  border-blue-600/30 dark:border-stone-700 text-center text-[12px] sm:text-base py-2 tracking-wider '>{item?.price}</td>
                                 </tr>)
                             )}
                         </tbody>
                     </table>
                     {/* заголовок маркированного списка */}
                     <div className='flex flex-row justify-center w-full dark:text-stone-300'>
-                        <h3 className='text-sm md:text-lg '>{targetPage.ulFirstTitle && targetPage.ulFirstTitle}</h3>
+                        <h3 className='text-base md:text-lg '>{targetPage.ulFirstTitle && targetPage.ulFirstTitle}</h3>
                     </div>
                     {/* маркированный список */}
                     <div className='flex flex-col w-full pl-6'>
                         {targetPage.liFirstDiv && targetPage.liFirstDiv.map((li: any, indexLi: number) => <ul key={indexLi} className=' list-disc  dark:text-stone-300 '>
-                            <li className='tracking-wider text-xs md:text-base'>{li}</li>
+                            <li className='tracking-wider text-sm md:text-base'>{li}</li>
                         </ul>)}
                     </div>
                     {/* текстовое описание услуги */}
-                    <p className=' text-left select-none hyphens-auto dark:text-stone-300 indent-4' ><span dangerouslySetInnerHTML={{ __html: targetPage?.firstDivContent }}></span> </p>
+                    <p className='text-sm sm:text-base text-left select-none hyphens-auto dark:text-stone-300 indent-4' ><span dangerouslySetInnerHTML={{ __html: targetPage?.firstDivContent }}></span> </p>
 
                 </div>
             )}

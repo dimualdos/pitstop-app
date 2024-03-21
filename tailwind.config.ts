@@ -7,6 +7,8 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "selector",
+  // darkMode: "class",
+
   theme: {
     extend: {
       backgroundImage: {
