@@ -49,7 +49,7 @@ const DynamicPage = () => {
     return (
         <>
             {targetPage && (
-                <div className='flex  gap-4 flex-col pl-2 pr-2 items-center '>
+                <div className='flex  gap-4 flex-col h-[100dvh-20%] pl-2 pr-2 items-center '>
                     <div className=' text-center'>
                         <h1 role="heading" className='hyphens-auto text-base md:text-[18px] dark:text-stone-300 tracking-wider uppercase font-semibold'>
                             {targetPage?.H1}

@@ -1,16 +1,16 @@
-import bamperReplacementMers from '../../../../public/замена-бампера/замена-бампера-мерседес/bumper-replacement-mersedes.jpg';
-import bamperReplacementMers1 from '../../../../public/замена-бампера/замена-бампера-мерседес/bumper-replacement-mersedes1.jpg';
-import bamperReplacementMers2 from '../../../../public/замена-бампера/замена-бампера-мерседес/bumper-replacement-mersedes2.jpg';
-import bamperReplacementMers3 from '../../../../public/замена-бампера/замена-бампера-мерседес/bumper-replacement-mersedes3.jpg';
-import bamperReplacementMers4 from '../../../../public/замена-бампера/замена-бампера-мерседес/bumper-replacement-mersedes4.jpg';
-import bamperReplacementSubaru from '../../../../public/замена-бампера/замена-бампера-субару/bumper-replacement.jpg';
-import bamperReplacementSubaru1 from '../../../../public/замена-бампера/замена-бампера-субару/bumper-replacement1.jpg';
-import bamperReplacementSubaru2 from '../../../../public/замена-бампера/замена-бампера-субару/bumper-replacement2.jpg';
-import bamperReplacementSubaru3 from '../../../../public/замена-бампера/замена-бампера-субару/bumper-replacement3.jpg';
-import bamperReplacementSubaru4 from '../../../../public/замена-бампера/замена-бампера-субару/bumper-replacement4.jpg';
-import bamperReplacementHuindai from '../../../../public/замена-бампера/замена-бампера-хендэ/bumper-replacement-hyundai.jpg';
-import bamperReplacementHuindai1 from '../../../../public/замена-бампера/замена-бампера-хендэ/bumper-replacement-hyundai1.jpg';
-import bamperReplacementHuindai2 from '../../../../public/замена-бампера/замена-бампера-хендэ/bumper-replacement-hyundai2.jpg';
+import bamperReplacementMers from '../../../../public/замена-бампера/замена-бампера-мерседес/bumper-replacement-mersedes.webp';
+import bamperReplacementMers1 from '../../../../public/замена-бампера/замена-бампера-мерседес/bumper-replacement-mersedes1.webp';
+import bamperReplacementMers2 from '../../../../public/замена-бампера/замена-бампера-мерседес/bumper-replacement-mersedes2.webp';
+import bamperReplacementMers3 from '../../../../public/замена-бампера/замена-бампера-мерседес/bumper-replacement-mersedes3.webp';
+import bamperReplacementMers4 from '../../../../public/замена-бампера/замена-бампера-мерседес/bumper-replacement-mersedes4.webp';
+import bamperReplacementSubaru from '../../../../public/замена-бампера/замена-бампера-субару/bumper-replacement.webp';
+import bamperReplacementSubaru1 from '../../../../public/замена-бампера/замена-бампера-субару/bumper-replacement1.webp';
+import bamperReplacementSubaru2 from '../../../../public/замена-бампера/замена-бампера-субару/bumper-replacement2.webp';
+import bamperReplacementSubaru3 from '../../../../public/замена-бампера/замена-бампера-субару/bumper-replacement3.webp';
+import bamperReplacementSubaru4 from '../../../../public/замена-бампера/замена-бампера-субару/bumper-replacement4.webp';
+import bamperReplacementHuindai from '../../../../public/замена-бампера/замена-бампера-хендэ/bumper-replacement-hyundai.webp';
+import bamperReplacementHuindai1 from '../../../../public/замена-бампера/замена-бампера-хендэ/bumper-replacement-hyundai1.webp';
+import bamperReplacementHuindai2 from '../../../../public/замена-бампера/замена-бампера-хендэ/bumper-replacement-hyundai2.webp';
 
 
 

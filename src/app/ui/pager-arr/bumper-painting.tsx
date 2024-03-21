@@ -1,20 +1,20 @@
-import bumperPaintMers from '../../../../public/покраска-бампера/mersedes/bumper-painting.jpg';
-import bumperPaintMers1 from '../../../../public/покраска-бампера/mersedes/bumper-painting1.jpg';
-import bumperPaintMers2 from '../../../../public/покраска-бампера/mersedes/bumper-painting2.jpg';
-import bumperPaintMers3 from '../../../../public/покраска-бампера/mersedes/bumper-painting3.jpg';
-import bumperPaintMerWhite from '../../../../public/покраска-бампера/mers-white/bumper-painting.jpg';
-import bumperPaintMerWhite1 from '../../../../public/покраска-бампера/mers-white/bumper-painting1.jpg';
-import bumperPaintMerWhite2 from '../../../../public/покраска-бампера/mers-white/bumper-painting2.jpg';
-import bumperPaintMerWhite3 from '../../../../public/покраска-бампера/mers-white/bumper-painting.jpg';
-import bumperPaintOpel from '../../../../public/покраска-бампера/Opel/bumper-painting.jpg';
-import bumperPaintOpel1 from '../../../../public/покраска-бампера/Opel/bumper-painting1.jpg';
-import bumperPaintOpel2 from '../../../../public/покраска-бампера/Opel/bumper-painting2.jpg';
-import bumperPaintOpel3 from '../../../../public/покраска-бампера/Opel/bumper-painting3.jpg';
-import bumperPaintOpel4 from '../../../../public/покраска-бампера/Opel/bumper-painting4.jpg';
-import bumperPaintVolks from '../../../../public/покраска-бампера/Volkswagen/bumper-painting.jpg';
-import bumperPaintVolks1 from '../../../../public/покраска-бампера/Volkswagen/bumper-painting1.jpg';
-import bumperPaintVolks2 from '../../../../public/покраска-бампера/Volkswagen/bumper-painting2.jpg';
-import bumperPaintVolks3 from '../../../../public/покраска-бампера/Volkswagen/bumper-painting3.jpg';
+import bumperPaintMers from '../../../../public/покраска-бампера/mersedes/bumper-painting.webp';
+import bumperPaintMers1 from '../../../../public/покраска-бампера/mersedes/bumper-painting1.webp';
+import bumperPaintMers2 from '../../../../public/покраска-бампера/mersedes/bumper-painting2.webp';
+import bumperPaintMers3 from '../../../../public/покраска-бампера/mersedes/bumper-painting3.webp';
+import bumperPaintMerWhite from '../../../../public/покраска-бампера/mers-white/bumper-painting.webp';
+import bumperPaintMerWhite1 from '../../../../public/покраска-бампера/mers-white/bumper-painting1.webp';
+import bumperPaintMerWhite2 from '../../../../public/покраска-бампера/mers-white/bumper-painting2.webp';
+import bumperPaintMerWhite3 from '../../../../public/покраска-бампера/mers-white/bumper-painting.webp';
+import bumperPaintOpel from '../../../../public/покраска-бампера/Opel/bumper-painting.webp';
+import bumperPaintOpel1 from '../../../../public/покраска-бампера/Opel/bumper-painting1.webp';
+import bumperPaintOpel2 from '../../../../public/покраска-бампера/Opel/bumper-painting2.webp';
+import bumperPaintOpel3 from '../../../../public/покраска-бампера/Opel/bumper-painting3.webp';
+import bumperPaintOpel4 from '../../../../public/покраска-бампера/Opel/bumper-painting4.webp';
+import bumperPaintVolks from '../../../../public/покраска-бампера/Volkswagen/bumper-painting.webp';
+import bumperPaintVolks1 from '../../../../public/покраска-бампера/Volkswagen/bumper-painting1.webp';
+import bumperPaintVolks2 from '../../../../public/покраска-бампера/Volkswagen/bumper-painting2.webp';
+import bumperPaintVolks3 from '../../../../public/покраска-бампера/Volkswagen/bumper-painting3.webp';
 
 export const bumperPainting = {
     title: 'Покраска бампера авто в Москве',

@@ -64,7 +64,7 @@ export default function Header() {
 
         <header className="dark:bg-gray-800  bg-gray-200 flex flex-row justify-between gap-2 sm:gap-4 basis-full items-center min-h-12" >
             <Link href="/" aria-label="Ссылка на главную страницу">
-                <Image src={logo} aria-label="PitStop Logo" alt="logo" className="ml-2 sm:h-12 sm:w-12 w-9 h-auto" />
+                <Image priority={true} src={logo} aria-label="PitStop Logo" alt="logo" className="ml-2 sm:h-12 sm:w-12 w-9 h-auto" />
             </Link>
             {/* ватсап и телефон */}
             <div className="flex flex-row gap-4  justify-between  dark:text-stone-300">

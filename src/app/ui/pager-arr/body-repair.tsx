@@ -1,18 +1,18 @@
-import bodyRepairBMW from '../../../../public/кузовной-ремонт/BMW/body-repair.jpg';
-import bodyRepairBMW1 from '../../../../public/кузовной-ремонт/BMW/body-repair1.jpg';
-import bodyRepairBMW2 from '../../../../public/кузовной-ремонт/BMW/body-repair2.jpg';
-import bodyRepairBMW3 from '../../../../public/кузовной-ремонт/BMW/body-repair3.jpg';
-import bodyRepairBMW4 from '../../../../public/кузовной-ремонт/BMW/body-repair4.jpg';
-import bodyRepairDuster1 from '../../../../public/кузовной-ремонт/duster/duster1.jpg';
-import bodyRepairDuster2 from '../../../../public/кузовной-ремонт/duster/duster2.jpg';
-import bodyRepairDuster3 from '../../../../public/кузовной-ремонт/duster/duster3.jpg';
-import bodyRepairSkoda from '../../../../public/кузовной-ремонт/skoda/body-repair.jpg';
-import bodyRepairSkoda1 from '../../../../public/кузовной-ремонт/skoda/body-repair1.jpg';
-import bodyRepairSkoda2 from '../../../../public/кузовной-ремонт/skoda/body-repair2.jpg';
-import bodyRepairSkoda3 from '../../../../public/кузовной-ремонт/skoda/body-repair3.jpg';
-import bodyRepairSkoda4 from '../../../../public/кузовной-ремонт/skoda/body-repair4.jpg';
-import bodyRepairSkoda5 from '../../../../public/кузовной-ремонт/skoda/body-repair5.jpg';
-import bodyRepairSkoda6 from '../../../../public/кузовной-ремонт/skoda/body-repair6.jpg';
+import bodyRepairBMW from '../../../../public/кузовной-ремонт/BMW/body-repair.webp';
+import bodyRepairBMW1 from '../../../../public/кузовной-ремонт/BMW/body-repair1.webp';
+import bodyRepairBMW2 from '../../../../public/кузовной-ремонт/BMW/body-repair2.webp';
+import bodyRepairBMW3 from '../../../../public/кузовной-ремонт/BMW/body-repair3.webp';
+import bodyRepairBMW4 from '../../../../public/кузовной-ремонт/BMW/body-repair4.webp';
+import bodyRepairDuster1 from '../../../../public/кузовной-ремонт/duster/duster1.webp';
+import bodyRepairDuster2 from '../../../../public/кузовной-ремонт/duster/duster2.webp';
+import bodyRepairDuster3 from '../../../../public/кузовной-ремонт/duster/duster3.webp';
+import bodyRepairSkoda from '../../../../public/кузовной-ремонт/skoda/body-repair.webp';
+import bodyRepairSkoda1 from '../../../../public/кузовной-ремонт/skoda/body-repair1.webp';
+import bodyRepairSkoda2 from '../../../../public/кузовной-ремонт/skoda/body-repair2.webp';
+import bodyRepairSkoda3 from '../../../../public/кузовной-ремонт/skoda/body-repair3.webp';
+import bodyRepairSkoda4 from '../../../../public/кузовной-ремонт/skoda/body-repair4.webp';
+import bodyRepairSkoda5 from '../../../../public/кузовной-ремонт/skoda/body-repair5.webp';
+import bodyRepairSkoda6 from '../../../../public/кузовной-ремонт/skoda/body-repair6.webp';
 
 
 

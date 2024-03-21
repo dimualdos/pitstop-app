@@ -1,20 +1,20 @@
-import carDoorPaintLR from '../../../../public/Покраска-двери-авто/LandRover/car-door-painting.jpg';
-import carDoorPaintLR1 from '../../../../public/Покраска-двери-авто/LandRover/car-door-painting1.jpg';
-import carDoorPaintLR2 from '../../../../public/Покраска-двери-авто/LandRover/car-door-painting2.jpg';
-import carDoorPaintLR3 from '../../../../public/Покраска-двери-авто/LandRover/car-door-painting3.jpg';
-import carDoorPaintLR4 from '../../../../public/Покраска-двери-авто/LandRover/car-door-painting4.jpg';
-import carDoorPaintMazda from '../../../../public/Покраска-двери-авто/Mazda/car-door-painting.jpg';
-import carDoorPaintMazda1 from '../../../../public/Покраска-двери-авто/Mazda/car-door-painting1.jpg';
-import carDoorPaintMazda2 from '../../../../public/Покраска-двери-авто/Mazda/car-door-painting2.jpg';
-import carDoorPaintMazda3 from '../../../../public/Покраска-двери-авто/Mazda/car-door-painting3.jpg';
-import carDoorPaintSubaru from '../../../../public/Покраска-двери-авто/Subaru/car-door-painting.jpg';
-import carDoorPaintSubaru1 from '../../../../public/Покраска-двери-авто/Subaru/car-door-painting1.jpg';
-import carDoorPaintSubaru2 from '../../../../public/Покраска-двери-авто/Subaru/car-door-painting2.jpg';
-import carDoorPaintSubaru3 from '../../../../public/Покраска-двери-авто/Subaru/car-door-painting3.jpg';
-import carDoorPaintVolvo from '../../../../public/Покраска-двери-авто/VolovoXC90/car-door-painting.jpg';
-import carDoorPaintVolvo1 from '../../../../public/Покраска-двери-авто/VolovoXC90/car-door-painting1.jpg';
-import carDoorPaintVolvo2 from '../../../../public/Покраска-двери-авто/VolovoXC90/car-door-painting2.jpg';
-import carDoorPaintVolvo3 from '../../../../public/Покраска-двери-авто/VolovoXC90/car-door-painting3.jpg';
+import carDoorPaintLR from '../../../../public/Покраска-двери-авто/LandRover/car-door-painting.webp';
+import carDoorPaintLR1 from '../../../../public/Покраска-двери-авто/LandRover/car-door-painting1.webp';
+import carDoorPaintLR2 from '../../../../public/Покраска-двери-авто/LandRover/car-door-painting2.webp';
+import carDoorPaintLR3 from '../../../../public/Покраска-двери-авто/LandRover/car-door-painting3.webp';
+import carDoorPaintLR4 from '../../../../public/Покраска-двери-авто/LandRover/car-door-painting4.webp';
+import carDoorPaintMazda from '../../../../public/Покраска-двери-авто/Mazda/car-door-painting.webp';
+import carDoorPaintMazda1 from '../../../../public/Покраска-двери-авто/Mazda/car-door-painting1.webp';
+import carDoorPaintMazda2 from '../../../../public/Покраска-двери-авто/Mazda/car-door-painting2.webp';
+import carDoorPaintMazda3 from '../../../../public/Покраска-двери-авто/Mazda/car-door-painting3.webp';
+import carDoorPaintSubaru from '../../../../public/Покраска-двери-авто/Subaru/car-door-painting.webp';
+import carDoorPaintSubaru1 from '../../../../public/Покраска-двери-авто/Subaru/car-door-painting1.webp';
+import carDoorPaintSubaru2 from '../../../../public/Покраска-двери-авто/Subaru/car-door-painting2.webp';
+import carDoorPaintSubaru3 from '../../../../public/Покраска-двери-авто/Subaru/car-door-painting3.webp';
+import carDoorPaintVolvo from '../../../../public/Покраска-двери-авто/VolovoXC90/car-door-painting.webp';
+import carDoorPaintVolvo1 from '../../../../public/Покраска-двери-авто/VolovoXC90/car-door-painting1.webp';
+import carDoorPaintVolvo2 from '../../../../public/Покраска-двери-авто/VolovoXC90/car-door-painting2.webp';
+import carDoorPaintVolvo3 from '../../../../public/Покраска-двери-авто/VolovoXC90/car-door-painting3.webp';
 
 
 
