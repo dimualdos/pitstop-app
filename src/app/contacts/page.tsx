@@ -22,8 +22,6 @@ export default function Contacts() {
         {/* </div> */}
       </div>
     </>
-
-
   );
 };
 
