@@ -39,9 +39,10 @@ export default function RootLayout({
   return (
 
     <html lang="ru">
-      <GoogleTagManager gtmId="	GTM-5S7PP2" />
+      <GoogleTagManager gtmId="GTM-5S7PP2" />
       <StoreProvider>
         <body className={clsx(`${inter.className} flex flex-col dark:bg-gradient-to-r from-[#20334D] to-[#1b2e43]`,)}>
+
           <Header />
 
           <div className={`flex basis-full  flex-row mt-4 `}>
@@ -54,7 +55,7 @@ export default function RootLayout({
 
             </section>
           </div>
-          <div className="fixed bottom-0 w-[100vw]">
+          <div className=" w-[100vw]">
             <Footer />
           </div>
 

@@ -1,15 +1,27 @@
 'use client'
 
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import { links } from './links-map';
 import Image from 'next/image';
+import { useState } from 'react';
+import { useAppDispatch, useAppSelector } from '../services/hooks/hooks';
+
+import { openState } from '../services/open-menu-slice';
 
 export default function NavLinks() {
-  const router = useRouter();
   const pathname = usePathname();
+  const dispatch = useAppDispatch();
 
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
+
+  const handleClose = () => {
+    setTimeout(() => {
+      dispatch(openState(false));
+    }, 300)
+  };
 
   return (
     <>
@@ -21,6 +33,7 @@ export default function NavLinks() {
             aria-current={pathname === link.href ? 'page' : undefined}
             aria-label={`Ссылка на страницу ${link.name}`}
             role='menubar'
+            onClick={handleClose}
             className={clsx(
               'z-10 flex h-[48px] items-center gap-2 rounded-md p-3 text-sm font-medium flex-auto w-48 sm:w-56 justify-start  px-3 hover:bg-sky-200 hover:text-[#AE4A84] bg-gray-200 text-blue-600 dark:bg-gray-800 dark:text-stone-300 dark:hover:bg-gray-800 ',
               {
@@ -39,3 +52,4 @@ export default function NavLinks() {
     </>
   );
 }
+

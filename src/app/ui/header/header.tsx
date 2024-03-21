@@ -62,19 +62,19 @@ export default function Header() {
 
     return (
 
-        <header className="dark:bg-gray-800  bg-gray-200 flex flex-row justify-between gap-2 sm:gap-4 basis-full items-center h-14" >
+        <header className="dark:bg-gray-800  bg-gray-200 flex flex-row justify-between gap-2 sm:gap-4 basis-full items-center min-h-12" >
             <Link href="/" aria-label="Ссылка на главную страницу">
                 <Image src={logo} aria-label="PitStop Logo" alt="logo" className="ml-2 sm:h-12 sm:w-12 w-9 h-auto" />
             </Link>
             {/* ватсап и телефон */}
-            <div className="flex flex-row gap-5  justify-between  dark:text-stone-300">
+            <div className="flex flex-row gap-4  justify-between  dark:text-stone-300">
                 <Link href={'tel:+79852803434'} className="place-self-center flex flex-row   items-center ">
-                    <FaPhone aria-label='телефон' className='text-[#AE4A84] w-4 sm:w-5  h-auto sm:mr-2' />
+                    <FaPhone aria-label='телефон' className='text-[#AE4A84] w-5  h-auto sm:mr-2' />
                     <p className='hidden sm:block flex-auto text-xs  md:text-base '>8 (985) 280-34-34</p>
                     {/* иконка ватсап */}
                 </Link>
                 <Link href="https://api.whatsapp.com/send?phone=79852803434" className="place-self-center">
-                    <FaWhatsapp aria-label="whatsapp" className="text-[#AE4A84] place-self-center w-5 sm:w-6 h-auto items-center" />
+                    <FaWhatsapp aria-label="whatsapp" className="text-[#AE4A84] place-self-center w-6 h-auto items-center" />
                 </Link>
             </div>
 
@@ -82,7 +82,7 @@ export default function Header() {
             <div className="flex flex-row gap-2 justify-items-end items-center mr-2">
                 {/* конпка выбора темы */}
                 <div onClick={toglleTheme} className="flex flex-row gap-2 m-2 cursor-pointer">
-                    {themeApp === 'light' ? <FaSun aria-label='светлая тема' className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500/85" /> : <FaMoon aria-label='темная тема' className="w-4 h-4 sm:w-5 sm:h-5 text-blue-700/70" />}
+                    {themeApp === 'light' ? <FaSun aria-label='светлая тема' className="w-5 h-5 text-orange-500/85" /> : <FaMoon aria-label='темная тема' className="w-5 h-5 text-blue-700/70" />}
                 </div>
 
                 <Link href="/contacts" className='select-none'>
@@ -101,9 +101,9 @@ export default function Header() {
                     aria-label="Кнопка меню"
                     onClick={handleMenuClick}
                     className={clsx(
-                        "block sm:hidden   dark:bg-[#142030] bg-gray-300 dark:text-stone-300 p-1  px-1  rounded-md",
+                        "block sm:hidden   p-1  px-1  rounded-md",
                     )}>
-                    <MdOutlineMenu aria-label="меню" className="text-[#AE4A84] place-self-center min-w-5 max-w-5 sm:w-6 h-auto " />
+                    <MdOutlineMenu aria-label="меню" className="text-[#AE4A84] place-self-center w-6 h-auto " />
                 </button>
             </div>
         </header>

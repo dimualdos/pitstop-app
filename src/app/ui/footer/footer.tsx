@@ -19,7 +19,7 @@ export default function Footer() {
 
 
     return (
-        <footer className=' max-h-[66px]   w-[100%]'>
+        <footer className='fixed bottom-0 max-h-[66px] w-[100%] z-30'>
             <div className="dark:bg-gray-800 bg-gray-200 flex flex-col p-2 gap-1 basis-full items-center    " >
 
                 {/* телефон */}
