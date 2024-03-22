@@ -23,7 +23,7 @@ export default function Footer() {
             <div className="dark:bg-gray-800 bg-gray-200 flex flex-col p-2 gap-1 basis-full items-center    " >
 
                 {/* телефон */}
-                <div className="flex flex-row  w-[100%] justify-center gap-4 ">
+                <div className="flex flex-row  w-[100%] justify-center gap-4 mb-1">
                     <Link href={'mailto:info@pitstop-online.ru'} className="place-self-center flex flex-row   items-center ">
                         <Image src={mailIcon} alt='напишите нам на email' className=' w-4 h-auto mr-1' />
                         <p className='flex-auto text-xs md:text-base text-[#AE4A84]'>info@pitstop-online.ru</p>
@@ -44,10 +44,10 @@ export default function Footer() {
                 </div>
                 {/* вычисление года и адрес центра */}
                 <div className='flex flex-row justify-center items-center gap-2 dark:text-stone-300'>
-                    <p className='text-[10px] md:text-[12px] hyphens-auto'>© {dateYear}.</p>
-                    <Link href='/'>
-                        <p className='text-[10px] md:text-[12px] hyphens-auto'>ПитСтоп. 105187, Москва, Борисовская 37а.</p>
-                    </Link>
+                    <p className='text-[10px] md:text-[12px]'>© {dateYear}.</p>
+
+                    <p className='text-[10px] md:text-[12px] hyphens-auto'>ПитСтоп. 105187, Москва, Борисовская 37а.</p>
+
                     <Link href='https://avito.ru/user/e5fd9c2e76793021c5fb453fcbb6ab21/profile' target="_blank" className='flex flex-row items-center gap-1'>
                         <p className='text-[10px]'>создан</p>
                         <FaRegUser className='place-self-center w-2 h-auto text-blue-600' />
