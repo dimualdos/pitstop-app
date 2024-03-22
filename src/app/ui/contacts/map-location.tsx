@@ -98,7 +98,7 @@ const AppMapLocation: FC = () => {
     // }, []);
 
     return (
-        <div className="w-[90vw] md:w-[70vw] h-[80vh] md:h-[80vh]">
+        <div className="w-[90vw] md:w-[70vw] h-[75vh]">
             {/* <MapLocation location={location} /> */}
 
             <YMapComponentsProvider apiKey={apiKey} lang="ru_RU">
