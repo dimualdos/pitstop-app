@@ -1,16 +1,25 @@
 
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { GoogleTagManager } from '@next/third-parties/google';
 import { inter } from "./ui/fonts";
+import clsx from "clsx";
 import SideNav from "./ui/menu/sidenav";
 import Header from "./ui/header/header";
 import { StoreProvider } from "./ui/services/store-provider";
 import Footer from "./ui/footer/footer";
-import clsx from "clsx";
 import "./globals.css";
 
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ccc6c2' },
+    { media: '(prefers-color-scheme: dark)', color: '#0b3c54' },
+  ],
+}
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://pitstop-online.ru/'),
+
   title: {
     default: "Центр кузовного ремонта Пит-Стоп на Борисовской 37а",
     template: "%s | Пит-Стоп | Борисовская 37а",
@@ -24,11 +33,12 @@ export const metadata: Metadata = {
   icons: {
     shortcut: '../../public/favicon/apple-touch-icon.png',
     apple: '../../public/favicon/apple-touch-icon.png',
+    other: {
+      rel: 'apple-touch-icon',
+      url: '../../public/favicon/apple-touch-icon.png',
+    },
   },
-  // robots: {
-  //   index: true,
-  //   follow: true,
-  // }
+
 };
 
 export default function RootLayout({
