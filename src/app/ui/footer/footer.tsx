@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import mailIcon from '../../../../public/contacts_poster_.png';
 import { FaYoutube } from "react-icons/fa";
-import flapmIcon from '../../../../public/icons/flamp.webp';
+import flapmIcon from '../../../../public/flamp.webp';
 import { SiGooglemaps } from "react-icons/si";
 import { FaYandexInternational } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa";

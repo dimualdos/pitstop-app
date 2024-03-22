@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     telephone: true,
   },
   icons: {
-    shortcut: '../../public/favicon/apple-touch-icon.png',
-    apple: '../../public/favicon/apple-touch-icon.png',
+    shortcut: '../../public/icons/apple-touch-icon.png',
+    apple: '../../public/icons/apple-touch-icon.png',
     other: {
       rel: 'apple-touch-icon',
-      url: '../../public/favicon/apple-touch-icon.png',
+      url: '../../public/icons/favicon-32x32.png',
     },
   },
-
+  manifest: '../../public/icons/site.webmanifest',
 };
 
 export default function RootLayout({
