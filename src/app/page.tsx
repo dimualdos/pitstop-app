@@ -13,7 +13,7 @@ import imageCar12 from '../../public/head/car_door_painting3.webp';
 import { Carousel } from './ui/slider/carousel';
 
 
-const arrCar = [imageCar, imageCar2, imageCar3, imageCar4, imageCar5, imageCar6, imageCar7, imageCar8, imageCar11, imageCar12];
+const arrCar = [imageCar3, imageCar4, imageCar5, imageCar6, imageCar7, imageCar8, imageCar11, imageCar12, imageCar, imageCar2,];
 //главная страница сайта
 
 export default function Home() {
