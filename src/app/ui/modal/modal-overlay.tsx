@@ -38,4 +38,6 @@ const ModalOverlay: FC<TModalOverlay> = ({ onClose }) => {
     )
 }
 
+
 export default ModalOverlay;
+

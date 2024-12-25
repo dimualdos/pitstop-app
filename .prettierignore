@@ -1,0 +1,7 @@
+node_modules
+.vscode
+.yarn
+.next
+.prettierrc
+Dockerfile
+tsconfig.json
