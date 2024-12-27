@@ -61,7 +61,7 @@ export default function RootLayout({
 							{children}
 						</section>
 					</div>
-					<div className='fixed bottom-0 h-12 w-[100vw] md:h-[66px]'>
+					<div className='fixed bottom-0 z-30 h-12 w-[100vw] md:h-[66px]'>
 						<Footer />
 					</div>
 

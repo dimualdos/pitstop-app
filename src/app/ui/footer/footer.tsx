@@ -20,7 +20,7 @@ export default function Footer() {
 	}, [])
 
 	return (
-		<footer className='z-30 h-full w-full'>
+		<footer className='h-full w-full'>
 			<div className='flex h-full basis-full flex-col items-center gap-1 bg-gray-200 p-2 dark:bg-gray-800'>
 				{/* телефон */}
 				<div className='mb-1 flex w-[100%] flex-row justify-center gap-4'>
