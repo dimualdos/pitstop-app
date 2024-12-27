@@ -1,6 +1,4 @@
 import type { Metadata, ResolvingMetadata } from 'next'
-import Head from 'next/head'
-import { usePathname } from 'next/navigation'
 import { FC } from 'react'
 
 import DynamicPage from '../ui/dynamic-page'
