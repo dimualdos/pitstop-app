@@ -45,7 +45,7 @@ const DynamicPage = () => {
 	return (
 		<div>
 			{targetPage && (
-				<div className='flex flex-col items-center gap-4 pl-2 pr-2'>
+				<div className='flex h-full flex-col items-center gap-4 pl-2'>
 					<div className='text-center'>
 						<h1
 							role='heading'
@@ -146,7 +146,10 @@ const DynamicPage = () => {
 					</div>
 					{/* текстовое описание услуги */}
 					<p className='select-none hyphens-auto text-left indent-4 dark:text-stone-300'>
-						<span dangerouslySetInnerHTML={{ __html: targetPage?.firstDivContent }}></span>{' '}
+						<span
+							dangerouslySetInnerHTML={{ __html: targetPage?.firstDivContent }}
+							className='text-[1rem]'
+						></span>{' '}
 					</p>
 				</div>
 			)}

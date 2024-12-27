@@ -21,7 +21,7 @@ export default function SideNav() {
 	}
 
 	return (
-		<nav className='flex h-[80dvh] flex-col px-2'>
+		<nav className='flex h-full flex-col px-2'>
 			<div className={clsx(`hidden flex-col justify-start space-x-0 space-y-2 overflow-y-auto overflow-x-hidden sm:flex`)}>
 				<NavLinks />
 			</div>

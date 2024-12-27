@@ -25,19 +25,19 @@ export const metadata: Metadata = {
 	},
 	description:
 		'Кузовной ремонт, покраска деталей кузова, ремонт бамперов, локальная покраска, полировка кузова и фар, удаление вмятин без покраски  с гаратией 2 года',
-	formatDetection: {
-		email: true,
-		address: true,
-		telephone: true
-	},
-	icons: {
-		shortcut: '../../public/icons/apple-touch-icon.png',
-		apple: './icons/apple-touch-icon.png',
-		other: {
-			rel: 'android-touch-icon',
-			url: './manifest.webmanifest'
-		}
-	},
+	// formatDetection: {
+	// 	email: true,
+	// 	address: true,
+	// 	telephone: true
+	// },
+	// icons: {
+	// 	shortcut: '../../public/icons/apple-touch-icon.png',
+	// 	apple: './icons/apple-touch-icon.png',
+	// 	other: {
+	// 		rel: 'android-touch-icon',
+	// 		url: './manifest.webmanifest'
+	// 	}
+	// },
 	manifest: './manifest.webmanifest'
 }
 
@@ -50,16 +50,18 @@ export default function RootLayout({
 		<html lang='ru'>
 			<GoogleTagManager gtmId='GTM-5S7PP2' />
 			<StoreProvider>
-				<body className={clsx(`${inter.className} flex flex-col from-[#20334D] to-[#1b2e43] dark:bg-gradient-to-r`)}>
+				<body className={clsx(`${inter.className} flex flex-col justify-between from-[#20334D] to-[#1b2e43] dark:bg-gradient-to-r`)}>
 					<Header />
 
-					<div className={`mt-4 flex basis-full flex-row`}>
-						<div className='sm:w-64'>
+					<div className={`mt-1 flex basis-full flex-row`}>
+						<div className='max-h-[calc(100vh-7.5rem)] sm:w-64'>
 							<SideNav />
 						</div>
-						<section className='mr-2 h-[75lvh] w-[100%] overflow-y-auto overflow-x-hidden sm:w-[calc(100%-256px)]'>{children}</section>
+						<section className='max-h-[calc(100vh-5.7rem)] w-[100%] overflow-y-auto overflow-x-hidden sm:w-[calc(100%-256px)] md:max-h-[calc(100vh-7.5rem)]'>
+							{children}
+						</section>
 					</div>
-					<div className='w-[100vw]'>
+					<div className='fixed bottom-0 h-12 w-[100vw] md:h-[66px]'>
 						<Footer />
 					</div>
 
