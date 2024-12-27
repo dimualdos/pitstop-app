@@ -24,9 +24,6 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
 			address: true,
 			telephone: true
 		}
-		// openGraph: {
-		// 	images: ['/some-specific-page-image.jpg', ...previousImages]
-		// }
 	}
 }
 export async function generateStaticParams() {

@@ -45,7 +45,7 @@ const DynamicPage = () => {
 	return (
 		<div>
 			{targetPage && (
-				<div className='mt-2 flex flex-col items-center gap-4 overflow-y-auto pl-2 pr-4 md:my-2 md:pr-0'>
+				<div className='mt-2 flex flex-col items-center gap-4 overflow-y-auto px-2 pl-2 md:my-2 md:pr-0'>
 					<div className='text-center'>
 						<h1
 							role='heading'
