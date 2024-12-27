@@ -57,9 +57,7 @@ export default function RootLayout({
 						<div className='mb-2 h-[calc(100dvh-7.5rem)] sm:w-64'>
 							<SideNav />
 						</div>
-						<section className='mb-2 h-[calc(100dvh-7.5rem)] w-[100%] overflow-y-auto overflow-x-hidden sm:w-[calc(100%-256px)]'>
-							{children}
-						</section>
+						<section className='h-[calc(100dvh-7.5rem)] w-[100%] overflow-x-hidden md:pb-2'>{children}</section>
 					</div>
 					<div className='fixed bottom-0 z-30 h-12 w-[100vw] md:h-[66px]'>
 						<Footer />

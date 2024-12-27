@@ -17,10 +17,10 @@ import { Carousel } from './ui/slider/carousel'
 const arrCar = [imageCar3, imageCar4, imageCar5, imageCar6, imageCar7, imageCar8, imageCar11, imageCar12, imageCar, imageCar2]
 //главная страница сайта
 
-export default function Home() {
+export default function Page() {
 	return (
 		<main
-			className={`${inter.className} flex h-[calc(100dvh-7.5rem)] flex-col items-center justify-between gap-4 pr-4 md:pb-4 md:pr-0 md:pt-2`}
+			className={`${inter.className} flex h-[calc(100dvh-7.5rem)] flex-col items-center justify-between gap-4 pr-4 md:pb-2 md:pr-0 md:pt-2`}
 		>
 			<h1
 				role='heading'
