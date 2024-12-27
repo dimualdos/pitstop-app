@@ -3,7 +3,7 @@ import type { MetadataRoute } from 'next'
 export default function manifest(): MetadataRoute.Manifest {
 	return {
 		name: 'PitStop',
-		short_name: 'PS',
+		short_name: 'Кузовной цех',
 		start_url: '/',
 		scope: '/',
 		description: 'Кузовной ремонт в Москве',
