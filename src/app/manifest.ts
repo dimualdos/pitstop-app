@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
 	return {
 		name: 'PitStop',
 		short_name: 'PS',
-		start_url: '/source=pwa',
+		start_url: '/',
 		scope: '/',
 		description: 'Кузовной ремонт в Москве',
 		display: 'standalone',
