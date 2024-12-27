@@ -1,163 +1,157 @@
-import React, { FC, use, useCallback, useContext, useEffect, useRef, useState } from "react";
-import Image from 'next/image';
-
-import "./styles.css";
+import './styles.css'
+import React, { FC, useCallback, useContext, useRef, useState } from 'react'
 import {
-    YMap,
-    YMapComponentsProvider,
-    YMapDefaultSchemeLayer,
-    YMapDefaultFeaturesLayer,
-    YMapListener,
-    YMapFeature,
-    YMapCollection,
-    YMapTileDataSource,
-    YMapLayer,
-    YMapControls,
-    YMapGeolocationControl,
-    YMapZoomControl,
-    YMapHint,
-    YMapMarker,
-    YMapDefaultMarker,
-    YMapContainer,
-    YMapControlButton,
-    YMapHintContext,
+	YMap,
+	YMapComponentsProvider,
+	YMapContainer,
+	YMapControls,
+	YMapDefaultFeaturesLayer,
+	YMapDefaultMarker,
+	YMapDefaultSchemeLayer,
+	YMapGeolocationControl,
+	YMapHintContext,
+	YMapListener,
+	YMapZoomControl
+} from 'ymap3-components'
 
-} from "ymap3-components";
-import { location as LOCATION, features, apiKey } from "./helpers";
-import dotCart from '../../../../public/icon-pin.png';
-import homeImage from '../../../../public/home.svg';
-import { useAppSelector } from "../services/hooks/hooks";
-import { YMapTheme } from "@yandex/ymaps3-types";
+import homeImage from '../../../../public/home.svg'
+import dotCart from '../../../../public/icon-pin.png'
+import { useAppSelector } from '../services/hooks/hooks'
 
-
+import { location as LOCATION, apiKey, features } from './helpers'
 
 function MyHint() {
-    const hint: { hint: any } = useContext(YMapHintContext);
+	const hint: { hint: any } = useContext(YMapHintContext)
 
-    return (
-        <div className="hint">
-            <div className="hint-header">{hint?.hint}</div>
-            <div className="hint-hint">{hint?.hint}</div>
-            <div className="hint-desc">{hint?.hint}</div>
-        </div>
-    );
+	return (
+		<div className='hint'>
+			<div className='hint-header'>{hint?.hint}</div>
+			<div className='hint-hint'>{hint?.hint}</div>
+			<div className='hint-desc'>{hint?.hint}</div>
+		</div>
+	)
 }
 
 const MapLocation = ({ location }: any) => {
-    return (
-        <div className=" rounded bg-slate-900 w-32 h-32 p-3">
-            <div className=" bg-[#8774e1] text-lg font-bold">Center</div>
-            <div className=" text-red-500 font-bold">lat: {location.center[0].toFixed(2)}</div>
-            <div className="text-red-500 font-bold">long: {location.center[1].toFixed(2)}</div>
-            <div className="bg-[#8774e1] text-lg font-bold">Zoom</div>
-            <div className="text-red-500 font-bold">zoom: {location.zoom.toFixed(2)}</div>
-        </div>
-    );
-};
-
-
-
+	return (
+		<div className='h-32 w-32 rounded bg-slate-900 p-3'>
+			<div className='bg-[#8774e1] text-lg font-bold'>Center</div>
+			<div className='font-bold text-red-500'>lat: {location.center[0].toFixed(2)}</div>
+			<div className='font-bold text-red-500'>long: {location.center[1].toFixed(2)}</div>
+			<div className='bg-[#8774e1] text-lg font-bold'>Zoom</div>
+			<div className='font-bold text-red-500'>zoom: {location.zoom.toFixed(2)}</div>
+		</div>
+	)
+}
 
 const AppMapLocation: FC = () => {
-    const [location, setLocation] = useState(LOCATION);
-    const ymap3Ref = useRef(null);
-    const themeState = useAppSelector((state) => state.themeAppReduser.themeApp);
+	const { isOpen } = useAppSelector(state => state.openStateReduser)
+	const [location, setLocation] = useState(LOCATION)
+	const ymap3Ref = useRef(null)
+	const themeState = useAppSelector(state => state.themeAppReduser.themeApp)
 
+	const onUpdate = React.useCallback(({ location, mapInAction }: any) => {
+		if (!mapInAction) {
+			setLocation({
+				center: location.center,
+				zoom: location.zoom
+			})
+		}
+	}, [])
 
-    const onUpdate = React.useCallback(({ location, mapInAction }: any) => {
-        if (!mapInAction) {
-            setLocation({
-                center: location.center,
-                zoom: location.zoom,
-            });
-        }
-    }, []);
+	const getHint = useCallback((object: any) => object?.properties?.hint, [])
 
-    const getHint = useCallback((object: any) => object?.properties?.hint, []);
+	// const zoomIn = useCallback(() => {
+	//     setLocation((location: { zoom: number; }): any => {
+	//         const newLocation = {
+	//             ...location,
+	//             zoom: location.zoom + 1,
+	//         };
 
-    // const zoomIn = useCallback(() => {
-    //     setLocation((location: { zoom: number; }): any => {
-    //         const newLocation = {
-    //             ...location,
-    //             zoom: location.zoom + 1,
-    //         };
+	//         return newLocation;
+	//     });
+	// }, []);
 
-    //         return newLocation;
-    //     });
-    // }, []);
+	// const zoomOut = useCallback(() => {
+	//     setLocation((location: { zoom: number; }): any => {
+	//         const newLocation = {
+	//             ...location,
+	//             zoom: location.zoom - 1,
+	//         };
 
-    // const zoomOut = useCallback(() => {
-    //     setLocation((location: { zoom: number; }): any => {
-    //         const newLocation = {
-    //             ...location,
-    //             zoom: location.zoom - 1,
-    //         };
+	//         return newLocation;
+	//     });
+	// }, []);
 
-    //         return newLocation;
-    //     });
-    // }, []);
+	return (
+		<div className='h-[75vh] w-[90vw] md:w-[70vw]'>
+			{/* <MapLocation location={location} /> */}
 
-    return (
-        <div className="w-[90vw] md:w-[70vw] h-[75vh]">
-            {/* <MapLocation location={location} /> */}
+			<YMapComponentsProvider
+				apiKey={apiKey}
+				lang='ru_RU'
+			>
+				<YMap
+					key='map'
+					ref={ymap3Ref}
+					location={location}
+					mode='vector'
+					theme={themeState}
+				>
+					<YMapDefaultSchemeLayer />
+					<YMapDefaultFeaturesLayer />
+					<YMapListener onUpdate={onUpdate} />
+					{/* маркер техцентра */}
+					<YMapDefaultMarker
+						blockBehaviors={false}
+						popup={{ position: 'top', content: ' Москва, Борисовская 37а', hidesMarker: false }}
+						title='PitStop'
+						subtitle='Центр кузовного ремонта.'
+						color='#AE4A84'
+						coordinates={LOCATION.center}
+					/>
 
-            <YMapComponentsProvider apiKey={apiKey} lang="ru_RU">
-                <YMap
-                    key="map"
-                    ref={ymap3Ref}
-                    location={location}
-                    mode="vector"
-                    theme={themeState}
-                >
-                    <YMapDefaultSchemeLayer />
-                    <YMapDefaultFeaturesLayer />
-                    <YMapListener onUpdate={onUpdate} />
-                    {/* маркер техцентра */}
-                    <YMapDefaultMarker
-                        blockBehaviors={false}
-                        popup={{ position: 'top', content: " Москва, Борисовская 37а", hidesMarker: false }}
-                        title="PitStop"
-                        subtitle="Центр кузовного ремонта."
-                        color='#AE4A84'
-                        coordinates={LOCATION.center}
-                    />
-
-
-                    {/* <YMapMarker coordinates={LOCATION.center} >
+					{/* <YMapMarker coordinates={LOCATION.center} >
                         <YMapContainer>{dotCart && <Image src={homeImage} alt="marker" className="w-8 h-8" />}</YMapContainer>
                         lbkmgfl;nkmfg
                     </YMapMarker> */}
 
-                    <YMapControls position="bottom">
-                        <YMapZoomControl />
-                    </YMapControls>
+					{!isOpen ? (
+						<YMapControls position='bottom'>
+							<YMapZoomControl />
+						</YMapControls>
+					) : null}
 
-                    {/* кнопка определения позиции польлзователя */}
-                    <YMapControls position="bottom left">
-                        <YMapGeolocationControl />
-                    </YMapControls>
+					{/* кнопка определения позиции польлзователя */}
+					{!isOpen ? (
+						<YMapControls position='bottom left'>
+							<YMapGeolocationControl />
+						</YMapControls>
+					) : null}
 
+					{/* элемент составления маршрута до точки */}
+					{!isOpen ? (
+						<YMapControls position='top right'>
+							<YMapContainer>
+								<div className='rounded bg-stone-300/70 dark:bg-stone-900/60'>
+									<p className='p-2 text-sm font-medium text-stone-950 shadow-md shadow-blue-600/40 dark:text-stone-200/90'>
+										Москва, Борисовская 37а
+										<br />8 (985) 280-34-34{' '}
+									</p>
+								</div>
+							</YMapContainer>
+						</YMapControls>
+					) : null}
 
-                    {/* элемент составления маршрута до точки */}
-                    <YMapControls position="top right">
-                        <YMapContainer>
-                            <div className="bg-stone-300/70 dark:bg-stone-900/60 rounded">
-                                <p className=" text-stone-950 shadow-md shadow-blue-600/40 font-medium dark:text-stone-200/90 text-sm p-2">Москва, Борисовская 37а<br />8 (985) 280-34-34 </p>
-                            </div>
-
-
-                        </YMapContainer>
-                    </YMapControls>
-
-                    {/* <YMapControls position="top right">
+					{/* <YMapControls position="top right">
                         <YMapControlButton >
                             <div className="text-red-500 font-bold">Маршрут</div>
                         </YMapControlButton>
                     </YMapControls> */}
-                </YMap>
-            </YMapComponentsProvider>
-        </div >
-    );
+				</YMap>
+			</YMapComponentsProvider>
+		</div>
+	)
 }
 
-export default AppMapLocation;
+export default AppMapLocation
