@@ -54,10 +54,10 @@ export default function RootLayout({
 					<Header />
 
 					<div className={`mt-1 flex basis-full flex-row`}>
-						<div className='max-h-[calc(100vh-7.5rem)] sm:w-64'>
+						<div className='h-[calc(100vh-7.5rem)] sm:w-64'>
 							<SideNav />
 						</div>
-						<section className='max-h-[calc(100vh-5.7rem)] w-[100%] overflow-y-auto overflow-x-hidden sm:w-[calc(100%-256px)] md:max-h-[calc(100vh-7.5rem)]'>
+						<section className='h-[calc(100vh-7.5rem)] w-[100%] overflow-y-auto overflow-x-hidden sm:w-[calc(100%-256px)]'>
 							{children}
 						</section>
 					</div>

@@ -61,7 +61,7 @@ export default function Header() {
 	}
 
 	return (
-		<header className='flex h-12 basis-full flex-row items-center justify-between gap-2 bg-gray-200 sm:gap-4 dark:bg-gray-800'>
+		<header className='flex min-h-[3.5rem] basis-full flex-row items-center justify-between gap-2 bg-gray-200 sm:gap-4 dark:bg-gray-800'>
 			<Link
 				href='/'
 				aria-label='Ссылка на главную страницу'
