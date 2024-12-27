@@ -19,7 +19,7 @@ const arrCar = [imageCar3, imageCar4, imageCar5, imageCar6, imageCar7, imageCar8
 
 export default function Home() {
 	return (
-		<main className={`${inter.className} flex h-[calc(100vh-7.5rem)] flex-col items-center justify-between gap-4`}>
+		<main className={`${inter.className} flex h-[calc(100vh-7.5rem)] flex-col items-center justify-between gap-4 pr-4 md:pr-0`}>
 			<h1
 				role='heading'
 				className='text-center text-base font-semibold uppercase tracking-wider md:text-[18px] dark:text-stone-300'
