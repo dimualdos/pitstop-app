@@ -1,9 +1,9 @@
 import type { Metadata, ResolvingMetadata } from 'next'
-import { FC } from 'react'
+import type { FC } from 'react'
 
+import { pagesArr } from '../pager-arr/pages-arr'
 import DynamicPage from '../ui/dynamic-page'
 import { links } from '../ui/menu/links-map'
-import { pagesArr } from '../ui/pager-arr/pages-arr'
 
 type Props = {
 	params: Promise<{ servises: string }>

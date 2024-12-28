@@ -1,6 +1,7 @@
 'use client'
 
-import { YMapTheme } from '@yandex/ymaps3-types'
+import logo from '/public/logo-pitstop-poster.png'
+import { type YMapTheme } from '@yandex/ymaps3-types'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -12,10 +13,9 @@ import { FaPhone } from 'react-icons/fa6'
 import { FaSun } from 'react-icons/fa6'
 import { MdOutlineMenu } from 'react-icons/md'
 
-import logo from '../../../../public/logo-pitstop-poster.png'
-import { useAppDispatch, useAppSelector } from '../services/hooks/hooks'
-import { openState } from '../services/open-menu-slice'
-import { themeState } from '../services/theme-slice'
+import { useAppDispatch, useAppSelector } from '@/app/services/hooks/hooks'
+import { openState } from '@/app/services/open-menu-slice'
+import { themeState } from '@/app/services/theme-slice'
 
 export default function Header() {
 	const { isOpen } = useAppSelector(state => state.openStateReduser)

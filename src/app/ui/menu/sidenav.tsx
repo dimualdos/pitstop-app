@@ -3,9 +3,9 @@
 import clsx from 'clsx'
 import { useState } from 'react'
 
+import { useAppDispatch, useAppSelector } from '../../services/hooks/hooks'
+import { openState } from '../../services/open-menu-slice'
 import Modal from '../modal/modal'
-import { useAppDispatch, useAppSelector } from '../services/hooks/hooks'
-import { openState } from '../services/open-menu-slice'
 
 import NavLinks from '@/app/ui/menu/nav-links'
 

@@ -3,11 +3,11 @@ import { GoogleTagManager } from '@next/third-parties/google'
 import clsx from 'clsx'
 import type { Metadata, Viewport } from 'next'
 
+import { StoreProvider } from './services/store-provider'
 import { inter } from './ui/fonts'
 import Footer from './ui/footer/footer'
 import Header from './ui/header/header'
 import SideNav from './ui/menu/sidenav'
-import { StoreProvider } from './ui/services/store-provider'
 
 export const viewport: Viewport = {
 	themeColor: [

@@ -12,7 +12,10 @@
   "bracketSpacing": true,
   "importOrder": [
     "<THIRD_PARTY_MODULES>",
-    "^@/src/app/(.*)$",
+    "^@/services/(.*)$",
+    "^@/ui/(.*)$",
+    "^@/types/(.*)$",
+    "^@/pager-arr/(.*)$",
     "^(?!.*\\.css$)(../.*)$",
     "^(?!.*\\.css$)(./.*)$"
   ],

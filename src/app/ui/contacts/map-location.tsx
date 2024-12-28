@@ -1,5 +1,5 @@
 import './styles.css'
-import React, { FC, useCallback, useContext, useRef, useState } from 'react'
+import React, { type FC, useCallback, useContext, useRef, useState } from 'react'
 import {
 	YMap,
 	YMapComponentsProvider,
@@ -14,11 +14,9 @@ import {
 	YMapZoomControl
 } from 'ymap3-components'
 
-import homeImage from '../../../../public/home.svg'
-import dotCart from '../../../../public/icon-pin.png'
-import { useAppSelector } from '../services/hooks/hooks'
+import { useAppSelector } from '../../services/hooks/hooks'
 
-import { location as LOCATION, apiKey, features } from './helpers'
+import { location as LOCATION, apiKey } from './helpers'
 
 function MyHint() {
 	const hint: { hint: any } = useContext(YMapHintContext)

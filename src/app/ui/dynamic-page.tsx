@@ -5,11 +5,11 @@ import { notFound } from 'next/navigation'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
-import usePageObj from '../ui/services/hooks/use-page'
-import { Carousel } from '../ui/slider/carousel'
-import { IimagesArr } from '../ui/types'
+import usePageObj from '../services/hooks/use-page'
+import type { IimagesArr } from '../types'
 
 import { links } from './menu/links-map'
+import { Carousel } from './slider/carousel'
 
 const DynamicPage = () => {
 	// получаем данные по нужной странице из массива страниц
