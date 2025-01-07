@@ -15,7 +15,6 @@ export const viewport: Viewport = {
 		{ media: '(prefers-color-scheme: dark)', color: '#0b3c54' }
 	]
 }
-
 export const metadata: Metadata = {
 	metadataBase: new URL(`https://pitstop-online.ru/`),
 
@@ -25,6 +24,7 @@ export const metadata: Metadata = {
 	},
 	description:
 		'Кузовной ремонт, покраска деталей кузова, ремонт бамперов, локальная покраска, полировка кузова и фар, удаление вмятин без покраски  с гаратией 2 года',
+
 	// formatDetection: {
 	// 	email: true,
 	// 	address: true,
