@@ -11,7 +11,7 @@ import imageCar3 from '/public/head/body_repair.webp'
 import imageCar11 from '/public/head/car_door_painting2.webp'
 import imageCar12 from '/public/head/car_door_painting3.webp'
 
-import { inter, lusitana } from './ui/fonts'
+import { inter } from './ui/fonts'
 import { Carousel } from './ui/slider/carousel'
 
 const arrCar = [imageCar3, imageCar4, imageCar5, imageCar6, imageCar7, imageCar8, imageCar11, imageCar12, imageCar, imageCar2]
