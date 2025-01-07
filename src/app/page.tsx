@@ -10,7 +10,6 @@ import imageCar8 from '/public/head/body_repair5.webp'
 import imageCar3 from '/public/head/body_repair.webp'
 import imageCar11 from '/public/head/car_door_painting2.webp'
 import imageCar12 from '/public/head/car_door_painting3.webp'
-import Head from 'next/head'
 
 import { inter, lusitana } from './ui/fonts'
 import { Carousel } from './ui/slider/carousel'
